@@ -1,0 +1,176 @@
+.header {
+    width: 100%;
+
+}
+
+.box {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid green;
+
+}
+
+.logo_image {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.input {
+    display: flex;
+    flex-basis: 69%;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.menu {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.menu_teach {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile_btn {
+    display: none;
+}
+
+.button_sign {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    min-width: 14rem;
+
+}
+
+@media (max-width: 991.98px) {
+    .button_sign {
+        padding-right: 2.5rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .button_sign {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        position: fixed;
+        left: -100%;
+        right: 0;
+        top: 250px;
+        bottom: 0;
+        width: 100%;
+        height: 160px;
+        transition: Left 1s;
+        z-index: 999;
+        padding-right: 0px;
+
+    }
+
+    .input {
+        display: flex;
+        padding-left: 10%;
+        min-width: 60%;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+}
+
+@media (max-width: 991.98px) {
+    .mobile_btn {
+        display: block;
+        position: absolute;
+        right: 32px;
+        cursor: pointer;
+        z-index: 999;
+        top: 20px;
+    }
+
+    .input {
+        display: flex;
+        flex-basis: 37%;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+    }
+
+
+
+    .category {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        left: -100%;
+        right: 0;
+        top: 150px;
+        bottom: 0;
+        width: 100%;
+        height: 20px;
+        background: wheat;
+        transition: Left 1s;
+        z-index: 998;
+        gap: 20px;
+        flex-basis: 69%;
+
+
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        left: -100%;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100vh;
+        background: wheat;
+        transition: Left 1s;
+        z-index: 998;
+        gap: 20px;
+        flex-basis: 69%;
+
+    }
+
+    .menu_teach {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: fixed;
+        left: -100%;
+        right: 0;
+        top: 200px;
+        bottom: 0px;
+        width: 100%;
+        transition: Left 1s;
+        flex-basis: 69%;
+        z-index: 999;
+        height: 10px;
+
+    }
+
+    .active {
+        left: 0;
+    }
+
+    .menu a {
+        font-size: 24px;
+    }
+}
+
+
+html.lock-scroll,
+body.lock-scroll {
+    overflow: hidden;
+}
