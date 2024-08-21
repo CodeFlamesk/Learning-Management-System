@@ -1,0 +1,142 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer base {
+  body {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-display: swap;
+
+
+  }
+}
+
+@layer utilities {
+
+  .heading-1 {
+    @apply text-grey-900 text-2xl sm:text-3xl lg:text-[40px] leading-tight;
+  }
+
+  .heading-2 {
+    @apply text-xl sm:text-2xl lg:text-[32px] font-semibold text-grey-900 leading-tight;
+  }
+
+  .heading-3 {
+    @apply text-lg sm:text-xl lg:text-2xl font-semibold text-grey-900;
+  }
+
+  .heading-4-subheading {
+    @apply text-base sm:text-lg md:text-xl font-semibold text-grey-900 leading-relaxed;
+  }
+
+  .heading-5-subheading {
+    @apply text-lg font-semibold text-grey-900 leading-relaxed;
+  }
+
+  .small-text {
+    @apply font-normal text-sm leading-normal;
+  }
+
+  .paragraph {
+    @apply text-base font-normal leading-relaxed;
+  }
+
+  .paragraph-medium {
+    @apply text-base font-medium leading-relaxed;
+  }
+
+  .label {
+    @apply font-semibold text-xs leading-normal
+  }
+
+
+
+  .blue-button {
+    @apply text-sm py-4 px-6 text-white font-medium leading-normal rounded-lg inline-flex items-center justify-center transition-all duration-300 cursor-pointer gap-2;
+  }
+
+  .slider-button {
+    @apply py-2 px-4 rounded-lg bg-grey-disableColor w-[56px] h-[40px] flex justify-center items-center;
+  }
+
+
+
+  .bg-8 {
+    @apply rounded-lg p-4 border border-solid border-grey-border bg-grey-background;
+  }
+
+  .bg-8-white {
+    @apply rounded-lg p-4 border border-solid border-grey-border bg-white;
+  }
+
+  .bg-16 {
+    @apply rounded-2xl border border-solid shadow-main border-grey-border bg-white;
+  }
+
+  /*   .black-button-center {
+    @apply text-sm leading-relaxed transition-all duration-300 bg-grey-textDark border border-solid border-transparent hover:bg-white hover:border-grey-textDark font-medium text-white p-4 text-center flex items-center justify-center
+  } */
+
+  .black-button-border {
+    @apply text-sm leading-relaxed transition-all duration-300 bg-white border border-solid border-transparent hover:bg-grey-textDark hover:border-transparent hover:text-grey-textDark font-medium text-white p-4 text-center flex items-center justify-center;
+  }
+
+  .tab-button {
+    @apply py-[18px] px-10 w-[148px] rounded-lg cursor-pointer bg-white border border-solid duration-300 transition-all border-grey-border text-sm font-normal text-gray-900 leading-normal active:border-transparent hover:bg-primary-50 active:bg-primary-50;
+  }
+}
+
+.footer-social {
+  @apply flex items-center justify-center rounded-full bg-sl-main w-10 h-10 hover:bg-grey-800 transition-all duration-300 hover:scale-150;
+}
+
+.promotion-social {
+  @apply flex items-center justify-center rounded-full bg-sl-main w-10 h-10 hover:bg-sl-blue transition-all duration-300 hover:scale-125 border-4 border-grey-border hover:border;
+}
+
+.opened {
+  @apply overflow-y-hidden h-10;
+}
+
+.no-scroll {
+  @apply overflow-hidden;
+}
+
+.heading-5pt {
+  @apply font-semibold text-lg leading-7 pt-4 ft:pt-5
+}
+
+
+
+.inputs {
+  @apply mt-1 p-2 ft:p-4 text-primary-500 focus:border-blue focus:outline-none placeholder:text-bts-grey text-base leading-relaxed font-normal rounded-lg border border-grey-border border-solid h-10 md:h-58 w-full;
+}
+
+.inputs-checkout {
+  @apply mt-1 p-2 mt-2 ft:p-4 text-primary-500 focus:border-blue focus:outline-none placeholder:text-bts-grey text-base leading-relaxed font-normal rounded-lg border border-grey-border border-solid h-10 md:h-58 w-full;
+}
+
+.button-account {
+  @apply flex py-2.5 px-5 gap-x-1.5 bg-text-dark text-white items-center text-sm rounded-lg transition-all duration-300 hover:bg-primary-500 transition-all duration-300 transform hover:translate-x-0.5 hover:translate-y-0.5 w-full justify-center mt-4 ft:mt-5 md:justify-start px-6 py-3 md:w-183;
+
+}
+
+.button-text {
+  @apply text-grey-900 text-base font-normal
+}
+
+.pagination-courses {
+  @apply flex justify-center items-center min-w-43 min-h-41 border border-grey-border text-xs font-semibold leading-4 hover:text-blue transition-all duration-300 hover:border-blue;
+}
+
+.button-tabs {
+  @apply w-32 xs:w-148w h-12 flex items-center justify-center bg-white border border-grey-border hover:bg-primary-50 rounded-lg duration-300 transition-all;
+}
+
+.active {
+  @apply w-32 xs:w-148w h-12 flex items-center justify-center border border-grey-border rounded-lg duration-300 transition-all bg-yellow;
+}

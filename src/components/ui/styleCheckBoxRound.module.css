@@ -1,0 +1,169 @@
+.checkbox-wrapper {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+
+}
+
+.checkbox-element {
+    appearance: none;
+    position: relative;
+    top: 3.5px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #94A3B8;
+    cursor: pointer;
+
+}
+
+.checkbox-element:checked,
+.checkbox-element-paypal:checked {
+    appearance: none;
+    position: relative;
+    top: 3.5px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px dashed #94A3B8;
+    cursor: pointer;
+    animation: pulse 5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0% {
+
+        transform: rotate(380deg);
+        opacity: 1;
+    }
+
+    50% {
+
+        transform: rotate(-380deg);
+
+    }
+
+    100% {
+
+        opacity: 1;
+        transform: rotate(380deg);
+
+    }
+}
+
+.checkbox-element-paypal {
+    appearance: none;
+    position: relative;
+    top: 3.5px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #94A3B8;
+    cursor: pointer;
+}
+
+.checkbox-wrapper:hover .checkbox-element {
+    border-color: #3b82f6;
+
+}
+
+
+
+
+.checkbox-element:checked::before {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    cursor: pointer;
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-color: #3b82f6;
+    border-radius: 50%;
+    position: absolute;
+
+}
+
+.checkbox-element-paypal:checked::before {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    cursor: pointer;
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-color: #3b82f6;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.checkbox-reating-wrapper {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    margin: 8px 0;
+
+
+}
+
+.checkbox-reating-element {
+    appearance: none;
+    position: absolute;
+    align-items: center;
+    left: 0;
+    margin: 0;
+    border: 1px solid #E2E8F0;
+    border-radius: 3px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.checkbox-reating-wrapper:hover .checkbox-element {
+    border-color: #3b82f6;
+
+}
+
+
+
+
+.checkbox-reating-element:checked::before {
+    content: "";
+    display: block;
+    width: 110px;
+    height: 22px;
+    background: rgba(63, 210, 43, 0.2);
+    border-radius: 5px;
+    position: absolute;
+    top: -11px;
+    left: -3px;
+    box-shadow: 0 0 10px rgba(49, 210, 43, 0.5);
+    z-index: 11;
+    transition: all 0.3s ease-in-out;
+}
+
+.checkbox-reating-element:not(:checked):hover::before {
+    content: "";
+    display: block;
+    width: 110px;
+    height: 22px;
+    background: rgba(43, 166, 210, 0.2);
+    /* Напівпрозорий фон */
+    border-radius: 5px;
+    /* Закруглені краї */
+    position: absolute;
+    top: -11px;
+    left: -3px;
+    box-shadow: 0 0 10px rgba(43, 168, 210, 0.5);
+    /* Тінь для ефекту */
+    z-index: 11;
+    /* Щоб фон був позаду зірочок */
+    transition: all 0.3s ease-in-out;
+}
