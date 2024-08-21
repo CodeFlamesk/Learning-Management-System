@@ -31,7 +31,6 @@ const MentorInfo = () => {
                     <li> <Paragraph>Interaction Design        </Paragraph></li>
                     <li> <Paragraph>Visual Design         </Paragraph></li>
                     <li> <Paragraph>Usability Testing </Paragraph></li>
-
                     <li> <Paragraph>Wireframing and Prototyping </Paragraph></li>
                     <li> <Paragraph>Design Thinking</Paragraph></li>
                 </ul>
@@ -42,9 +41,9 @@ const MentorInfo = () => {
             <div className="sm:w-[200px] flex flex-col gap-7 items-center">
                 <img src={MentorAvatar} alt="MentorAvatar" className="rounded-full w-48" />
                 <div className="flex justify-evenly flex-wrap sm:flex-col gap-3.5 sm:pt-[27px] w-full">
-                    <button className="w-[200px]  h-[48px] border border-text-dark rounded-lg box-border hover:bg-sl-blue  hover:text-white duration-500 transition-all text-sm font-medium">Website</button>
-                    <button className=" w-[200px]  h-[48px] border border-text-dark rounded-lg box-border hover:bg-text-dark   hover:text-white duration-500 transition-all text-sm font-medium">Twitter</button>
-                    <button className=" w-[200px]  h-[48px] border border-text-dark rounded-lg  hover:bg-red-youtube  hover:text-white duration-500 transition-all text-sm font-medium">Youtube</button>
+                    <a href="https://github.com/CodeFlamesk" className="flex justify-center w-[200px]  h-[48px] border border-text-dark rounded-lg box-border hover:bg-sl-blue  hover:text-white duration-500 transition-all text-sm font-medium items-center">Website</a>
+                    <a href="https://x.com/?lang-en=" className="flex justify-center items-center w-[200px]  h-[48px] border border-text-dark rounded-lg box-border hover:bg-text-dark   hover:text-white duration-500 transition-all text-sm font-medium">Twitter</a>
+                    <a href="https://www.youtube.com/watch?v=3AkZazth0a0" className="flex justify-center items-center w-[200px]  h-[48px] border border-text-dark rounded-lg  hover:bg-red-youtube  hover:text-white duration-500 transition-all text-sm font-medium text-center">Youtube</a>
                 </div>
 
             </div>
