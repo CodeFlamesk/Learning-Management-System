@@ -9,7 +9,7 @@ import { Link, useParams } from 'react-router-dom';
 const Header = () => {
     const { id } = useParams();
     const [nav, setNav] = useState(false);
-    const [login, setLogin] = useState(false)
+
     useEffect(() => {
         if (nav) {
             document.body.classList.add('no-scroll');
@@ -24,8 +24,8 @@ const Header = () => {
         <header className='pt-3 gap-1 sm:gap-4 bg-white border-b border-grey-border pb-3 '>
             <div className='z-50 flex  items-center sm:justify-between px-5 sm:px-8 max-w-screen-ct mx-auto '>
                 <div className="flex   items-center gap-2.5">
-                    <Link to="/" href="#"><img src={logoHeader} alt="Logo" /></Link>
-                    <Link to="/" href="#" className="brand-name">Byway</Link>
+                    <Link to="/" ><img src={logoHeader} alt="Logo" /></Link>
+                    <Link to="/" className="brand-name">Byway</Link>
                 </div>
                 <div className={style.input}>
 
@@ -33,7 +33,7 @@ const Header = () => {
                         <div className={nav ? [style.category, style.active].join(' ') : style.category}>
                             <ul className='flex flex-wrap'>
                                 <li>
-                                    <Link to="/categories" href="#" className='text-grey-700 text-sm leading-5 font-medium hover:text-blue transition-all duration-300 tb:pt-0'>
+                                    <Link to="/categories" className='text-grey-700 text-sm leading-5 font-medium hover:text-blue transition-all duration-300 tb:pt-0'>
                                         Category
                                     </Link>
                                 </li>
@@ -48,7 +48,13 @@ const Header = () => {
                     </label>
                     <nav className={nav ? [style.menu_teach, style.active].join(' ') : [style.menu_teach]}>
                         <ul className='flex flex-wrap'>
-                            <li><a href="#" className='text-grey-700 text-2xl min-w-full tb:text-sm leading-5 font-medium  hover:text-blue transition-all duration-300 ' >Teach on Byway</a></li>
+                            <li>
+
+                                <Link to="/myprofile/profile" className='text-grey-700 text-sm leading-5 font-medium hover:text-blue transition-all duration-300 tb:pt-0'>
+                                    Teach on Byway
+                                </Link>
+
+                            </li>
                         </ul>
                     </nav>
 
@@ -56,7 +62,7 @@ const Header = () => {
                 <div className={nav ? [style.button_sign, style.active].join(' ') : [style.button_sign]}>
                     <Link to={`/categories/${id}/details/shoppingcart`} ><img src={basket} alt="Basket" /></Link>
 
-                    <Link to="/login" className="p-2.5  gap-x-6 box-border bg-grey-700 text-sm text-white border border-grey-700  items-center   transition-all duration-300 hover:bg-white hover:text-grey-700 sm:bg-white sm:text-grey-700 sm:hover:bg-grey-700  sm:hover:text-white transition-all duration-300 transform ">Log In</Link>
+                    <Link to="/login" className="p-2.5  gap-x-6 box-border bg-grey-700 text-sm text-white border border-grey-700  items-center   hover:bg-white hover:text-grey-700 sm:bg-white sm:text-grey-700 sm:hover:bg-grey-700  sm:hover:text-white transition-all duration-300 transform ">Log In</Link>
                     <Link to="/signup" className="p-2.5  gap-x-6 box-border  text-sm border-grey-700 bg-grey-700  text-white items-center sm:border-grey-700   border hover:bg-white hover:text-grey-700  sm: transition-all duration-300 transform ">Sign Up</Link>
                 </div>
                 <div onClick={() => setNav(!nav)} className={style.mobile_btn}>

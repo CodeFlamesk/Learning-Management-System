@@ -16,6 +16,14 @@ import ShoppingCart from '@/pages/paymentShoppingCart/ShoppingCart';
 import Checkout from '@pages/paymentShoppingCart/Checkout';
 import OrderComplate from '@pages/paymentShoppingCart/OrderComplete';
 import MentorPage from '@pages/MentorPage';
+import ProfilePage from '@pages/ProfilePage';
+import ProfileLayout from './ProfilePage/ProfileLayot';
+import Profile from './ProfilePage/Profile';
+
+import Teachers from './ProfilePage/Teachers';
+import Message from './ProfilePage/Message';
+import MyReviews from './ProfilePage/MyReviews';
+import MyCourses from './ProfilePage/MyCourses';
 
 
 const AppRouter = () => {
@@ -30,13 +38,20 @@ const AppRouter = () => {
                 <Route path="categories/:id/details/shoppingcart" element={<ShoppingCart />} />
                 <Route path="categories/:id/details/shoppingcart/checkout" element={<Checkout />} />
                 <Route path="categories/details/shoppingcart/checkout/complate" element={<OrderComplate />} />
+
                 <Route path="categories/mentorpage" element={<MentorPage />} />
 
 
             </Route>
 
+            <Route path="myprofile" element={<ProfileLayout />}>
 
-
+                <Route path="profile" element={<Profile />} />
+                <Route path="my-courses" element={<MyCourses />} />
+                <Route path="teachers" element={<Teachers />} />
+                <Route path="message" element={<Message />} />
+                <Route path="my-reviews" element={<MyReviews />} />
+            </Route>
 
             <Route path="categories/:id" element={<LayoutCourse />}>
 

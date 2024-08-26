@@ -65,12 +65,4 @@ const Categoryitem = ({ title, text, children }) => {
 }
 
 
-
-
-
-
-
-
-
-
 export default Categories

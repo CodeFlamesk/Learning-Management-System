@@ -3,7 +3,7 @@ import './CustomSelect.css';
 import ArrowDown from '@/components/PageCategories/icon/ArrowDown';
 
 
-const CustomSelect = ({ options }) => {
+const CustomSelect = ({ options, styles, text, styleheader }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [selectedOption, setSelectedOption] = useState(null);
     const dropdownRef = useRef(null);
@@ -33,13 +33,13 @@ const CustomSelect = ({ options }) => {
 
     return (
         <div className="custom-select" ref={dropdownRef}>
-            <div className="custom-select__header" onClick={handleToggle}>
+            <div className={`${styleheader}`} onClick={handleToggle}>
 
-                {selectedOption ? selectedOption.label : 'Theme'}
+                {selectedOption ? selectedOption.label : `${text}`}
                 <span className={`custom-select__arrow ${isOpen ? 'open' : ''}`}> <ArrowDown /> </span>
             </div>
             {isOpen && (
-                <ul className="custom-select__options">
+                <ul className={` ${styles} `}>
                     {options.map((option) => (
                         <li
                             key={option.value}

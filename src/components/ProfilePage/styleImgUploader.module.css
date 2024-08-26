@@ -1,0 +1,38 @@
+/* Стиль для інпута */
+.inputs-checkout {
+    padding: 0.5rem 1rem;
+    border: 1px solid #0F172A;
+    border-radius: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Стиль для кастомної кнопки 
+*/
+.custom-file-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 24px;
+    padding-right: 24px;
+    background-color: #ffffff;
+    color: #0F172A;
+    border: 1px solid #0F172A;
+    border-radius: 8px;
+    cursor: pointer;
+    transition-duration: 300ms;
+
+}
+
+/* Сховати реальний інпут для файлів */
+.input-uploaud {
+    display: none;
+}
+
+/* При ховері міняємо колір тексту */
+.custom-file-button:hover {
+
+    background: #7FA3D6;
+}

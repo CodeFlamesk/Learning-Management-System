@@ -10,6 +10,11 @@ import Syllabus from "components/CoursesPageCard/Syllabus";
 import Reviews from "components/CoursesPageCard/Reviews";
 import ShoppingCart from "pages/ShoppingCart";
 import OrderComplate from "@pages/paymentShoppingCart/OrderComplete";
+import Profile from "@components/ProfilePage/Profile";
+import MyCourses from "@components/ProfilePage/MyCourses";
+import Teachers from "@components/ProfilePage/Teachers";
+import Message from "@components/ProfilePage/Message";
+import MyReviews from "@components/ProfilePage/MyReviews";
 
 
 export const publicRoutes = [
@@ -63,4 +68,41 @@ export const publicRoutes = [
         Component: OrderComplate,
         name: "OrderComplate"
     },
+    {
+        path: PROFILEPAGE,
+        Component: ProfilePage,
+        name: "ProfilePage"
+    },
+    {
+        path: MENTORPAGE,
+        Component: MentorPage,
+        name: "MentorPage"
+    },
+    {
+        path: PROFILE,
+        Component: Profile,
+        name: "Profile"
+    },
+    {
+        path: MYCOURSES,
+        Component: MyCourses,
+        name: "MyCourses"
+    },
+    {
+        path: TEACHERS,
+        Component: Teachers,
+        name: "Teachers"
+    },
+    {
+        path: MESSAGE,
+        Component: Message,
+        name: "Message"
+    },
+    {
+        path: MYREVIEWS,
+        Component: MyReviews,
+        name: "MyReviews"
+    },
+
+
 ]

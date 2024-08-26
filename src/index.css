@@ -140,3 +140,52 @@
 .active {
   @apply w-32 xs:w-148w h-12 flex items-center justify-center border border-grey-border rounded-lg duration-300 transition-all bg-yellow;
 }
+
+
+
+
+.tabs-profile {
+  @apply w-full max-w-72 p-4 h-12 flex items-center bg-sl-main border-t border-grey-border duration-300 transition-all text-grey-700 text-sm font-normal hover:bg-yellow;
+}
+
+.active-tabs-profile {
+  @apply w-full max-w-72 p-4 h-12 flex items-center border-t border-grey-border duration-300 transition-all bg-grey-900 text-white text-sm font-normal;
+}
+
+.tabs-profilebt {
+  @apply w-full max-w-72 p-4 h-12 flex items-center bg-sl-main border-t border-grey-border duration-300 transition-all text-grey-700 text-sm font-normal hover:bg-yellow rounded-b-2xl;
+}
+
+.active-tabs-profilebt {
+  @apply w-full max-w-72 p-4 h-12 flex items-center border-t border-grey-border duration-300 transition-all bg-grey-900 text-white text-sm font-normal rounded-b-2xl;
+}
+
+.tabs-profilet {
+  @apply w-full max-w-72 p-4 h-12 flex items-center bg-sl-main border-t border-grey-border duration-300 transition-all text-grey-700 text-sm font-normal hover:bg-yellow;
+}
+
+.active-tabs-profilet {
+  @apply w-full max-w-72 p-4 h-12 flex items-center border-t border-grey-border duration-300 transition-all bg-grey-900 text-white text-sm font-normal;
+}
+
+.tabs-profilet::before,
+.active-tabs-profilet::before {
+  content: "";
+  position: absolute;
+  left: 5%;
+  top: 314px;
+  width: 90%;
+  height: 1px;
+  background-color: #E2E8F0;
+  /* Колір лінії */
+  margin-bottom: 8px;
+  /* Відступ між лінією і текстом */
+}
+
+.tabs-slidebar {
+  @apply flex h-16 items-center justify-center;
+}
+
+.active-slidebar {
+  @apply h-14 w-[60px] bg-yellow;
+}

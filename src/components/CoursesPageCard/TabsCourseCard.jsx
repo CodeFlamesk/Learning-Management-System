@@ -1,9 +1,9 @@
 import SmallText from "@/components/ui/SmallText";
 import React from 'react';
 
-import { NavLink, useParams } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 const TabsCourse = () => {
-    const { id } = useParams();
+
 
     return (
 

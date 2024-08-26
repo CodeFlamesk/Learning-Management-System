@@ -50,8 +50,8 @@ export const LinkSocial = ({ styleAll, styleIcon }) => {
 const Footer = () => {
 
     return (
-        <div className=' bg-grey-800 '>
-            <div className='flex  flex-col max-w-screen-xl mx-auto px-5 sm:px-8 sm:flex-row justify-between pb-14 pt-7 md:gap-6 md:pt-20 md:pb-25 '>
+        <div className=' bg-grey-800 px-5 sm:px-8 '>
+            <div className='flex  flex-col max-w-screen-xl mx-auto  sm:flex-row justify-between pb-14 pt-7 md:gap-6 md:pt-20 md:pb-25 '>
                 <div className='basis-[42%] md:basis-[33%]' >
                     <img src={logoFooter} alt="Logo" />
                     <FooterSmallText title={`Empowering learners through accessible and engaging online education.

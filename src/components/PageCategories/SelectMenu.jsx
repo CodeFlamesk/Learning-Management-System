@@ -6,8 +6,8 @@ const SelectMenu = () => {
 
     const [selectedPriceFilter, setSelectedPriceFilter] = useState(null);
     const priceFilters = [
-        { value: 'under_100', label: 'Relevance' },
-        { value: '100_to_500', label: 'Relevance' },
+        { value: 'under_1003', label: 'Relevance' },
+        { value: '100_to_5030', label: 'Relevance' },
         { value: 'over_500', label: 'Relevance' },
     ];
     const handlePriceFilterChange = (filter) => {
@@ -17,7 +17,7 @@ const SelectMenu = () => {
 
     return (
         <div>
-            <CustomSelect options={priceFilters} onSelect={<ArrowDown />} />
+            <CustomSelect options={priceFilters} onSelect={<ArrowDown />} text="Theme" styles="custom-select__options" styleheader="custom-select__header " />
 
         </div>
     );
