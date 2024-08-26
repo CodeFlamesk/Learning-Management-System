@@ -36,7 +36,7 @@ const Profile = () => {
         console.log('Selected Price Filter:', filter);
     };
     return (
-        <div className="flex flex-col">
+        <div className="flex flex-col relative ">
 
             <form className="flex flex-col w-full border border-grey-border py-6 px-6 rounded-2xl ">
                 <div className="flex flex-col  gap-y-4">
@@ -85,8 +85,7 @@ const Profile = () => {
                 <ImageUploader uploading="Add/Change Image" />
 
             </form>
-            <form className="inline-block flex-col w-full border border-grey-border
-             p-6 rounded-2xl mb-4">
+            <form className="inline-block flex-col w-full border border-grey-border mt-6     p-6 rounded-2xl mb-4">
                 <SubheadingM title="Links" />
 
                 <label htmlFor="Website"  >

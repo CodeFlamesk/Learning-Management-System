@@ -15,9 +15,9 @@ const ProfileLayout = () => {
         <>
 
             <Header />
-            <Container styles="pt-10">
+            <Container styles="pt-6 tb:pt-10">
 
-                <div className="flex  tb:justify-between gap-4 ">
+                <div className="flex flex-col tb:flex-row tb:justify-between gap-4 relative ">
 
                     <ProfileTabs />
 

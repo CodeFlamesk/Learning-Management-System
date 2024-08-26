@@ -1,8 +1,8 @@
 import React from 'react';
-const ButtonFilter = ({ text, iconComponent }) => {
+const ButtonFilter = ({ text, iconComponent, styles }) => {
     return (
         <>
-            <button type="button" className='flex py-3 px-6 gap-1.5 rounded-lg  border border-grey-900 solid max-w-full'>
+            <button type="button" className={`flex py-3 px-6 gap-1.5 rounded-lg  border border-grey-900 solid max-w-full ${styles}`}>
                 {iconComponent}
                 <p className='button-text'>{text}</p>
 

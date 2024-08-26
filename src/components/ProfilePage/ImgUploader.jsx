@@ -25,15 +25,16 @@ const ImageUploader = ({ uploading }) => {
 
                 </div>
             </div>
-            <label htmlFor="file-upload" className="pt-10 inline-flex max-w-full">
+            <label htmlFor="file-upload" className="mt-10 inline-flex max-w-max">
                 <SubheadingM title={uploading} styles="xs:text-lg text-grey-900 cursor-pointer inline-flex" />
             </label>
-            <div className="flex gap-4 items-center">
+
+            <div className="flex sm:flex-row flex-col  gap-4 sm:items-center">
                 <input type="text" className="inputs-checkout  max-w-600w" value={fileName} placeholder="Label" readOnly />
                 <label htmlFor="file-upload" className={styles["custom-file-button"]} >Upload&nbsp;Image</label>
                 <input id="file-upload" type="file" className={styles["input-uploaud"]} onChange={handleFileChange} accept="image/*" />
             </div>
-            <button htmlFor="file-upload" className="bg-grey-900 text-white font-medium text-sm px-4 py-3 w-[126px] mt-4 rounded-2xl hover:bg-white hover:text-grey-900 box-border border  hover:border-grey-900 duration-300 transition-all ">Save Image</button>
+            <button htmlFor="file-upload" className="bg-grey-900 text-white font-medium text-sm px-4 py-3 sm:w-[126px] mt-4 rounded-lg hover:bg-white hover:text-grey-900 box-border border  hover:border-grey-900 duration-300 transition-all ">Save Image</button>
 
         </>
     );
