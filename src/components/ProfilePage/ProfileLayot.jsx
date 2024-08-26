@@ -17,13 +17,13 @@ const ProfileLayout = () => {
             <Header />
             <Container styles="pt-10">
 
-                <div className="flex justify-between  ">
+                <div className="flex  tb:justify-between gap-4 ">
 
                     <ProfileTabs />
 
 
 
-                    <div className="flex basis-[74%]">
+                    <div className="flex tb:basis-[74%]">
                         <Outlet />
                     </div>
                 </div>
