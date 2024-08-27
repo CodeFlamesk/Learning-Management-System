@@ -82,7 +82,7 @@ module.exports = {
       "yellow": "#FEC84B",
       "sl-blue": "#7FA3D6",
       "blue-600": "#1479FF",
-
+      "grey-text-light": "#64748B",
       "text-dark": "#020617",
       "white": "#FFFFFF",
       "grey-100": "#F1F5F9",
