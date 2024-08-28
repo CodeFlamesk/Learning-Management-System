@@ -224,11 +224,11 @@
 }
 
 .chat-my-message {
-  @apply flex mt-2 py-2 px-4 text-white text-base font-normal rounded-lg bg-grey-900 ml-auto max-w-max w-[90%] sm:w-[80%] tb:w-[70%];
+  @apply mt-2 py-2 px-4 text-white text-base font-normal rounded-lg bg-grey-900 ml-auto max-w-max w-[90%] sm:w-[80%] tb:w-[500px] break-words;
 }
 
 .chat-teacher-message {
-  @apply mt-2 py-2 px-4 text-black text-base font-normal rounded-lg bg-grey-100 max-w-max w-[90%] sm:w-[80%] tb:w-[70%];
+  @apply mt-2 py-2 px-4 text-black text-base font-normal rounded-lg bg-grey-100 max-w-max max-w-[90%] sm:w-[80%] tb:w-[500px] break-words;
 
 }
 
