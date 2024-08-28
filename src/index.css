@@ -172,6 +172,29 @@
   @apply w-full max-w-72 p-4 h-12 flex items-center border-t border-grey-border duration-300 transition-all bg-grey-900 text-white text-sm font-normal;
 }
 
+/* Додайте ці стилі у ваш файл CSS */
+
+.custom-scrollbar::-webkit-scrollbar {
+  @apply w-1.5;
+  /* Ширина скроллбару */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  @apply bg-grey-border;
+  /* Колір трек-бара */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-blue-scrol;
+  /* Колір скроллбару */
+  border-radius: 9999px;
+  /* Закруглені кути скроллбару */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  @apply bg-blue;
+  /* Колір скроллбару при наведенні */
+}
 
 
 .tabs-profilet::before,

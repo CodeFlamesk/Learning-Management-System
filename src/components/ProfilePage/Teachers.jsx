@@ -1,34 +1,41 @@
-/* import Subheading from "@components/ui/Subheading";
+import Subheading from "@components/ui/Subheading";
 import AuthorRonaldImg from "../CoursesPageCard/img/author.webp";
 import Subtitle from "@components/ui/Subtitle";
 import ArrowIconBack from "./icon/ArrowIconBack";
 import DotsIcon from "./icon/DotsIcon";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+
 const formatTime = (date) => {
     const formatter = new Intl.DateTimeFormat('en-US', {
         hour: '2-digit',
         minute: '2-digit',
         hour12: true
     });
-    return formatter.format(date);
+    return formatter.format(date).toLowerCase();
 };
 
 const Teachers = () => {
-    const [sendMessage, setSendMessage] = useState("");
-    const [message, setMessage] = useState([]);
 
+    const [sendMessage, setSendMessage] = useState('');
+    const [saveMessages, setSaveMessages] = useState([]);
     const handleSendMessage = (event) => {
         event.preventDefault();
         if (sendMessage.trim()) {
-            setMessage([...message, { text: sendMessage, time: formatTime(new Date()) }])
-            setSendMessage("");
+            setSaveMessages([...saveMessages, { text: sendMessage, time: formatTime(new Date()) }]);
+            setSendMessage('');
         }
 
-    };
+    }
+    const messagesEndRef = useRef(null);
     useEffect(() => {
+        if (messagesEndRef.current) {
+            messagesEndRef.current.scrollIntoView({ behavior: 'smooth', block: 'end' });
 
-        messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-    }, [message]);
+        }
+    }, [saveMessages]);
+
+
+
 
 
     return (
@@ -44,7 +51,7 @@ const Teachers = () => {
                     </div>
                     <DotsIcon />
                 </div>
-                <div className="flex flex-col border-y border-grey-border py-7 px-4 overflow-auto max-h-[460px]">
+                <div className="flex flex-col border-y border-grey-border pt-7 px-4 overflow-auto max-h-[460px] custom-scrollbar ">
                     <div className="mx-auto text-center p-2 border border-grey-border bg-grey-100 rounded-lg text-xs text-grey-900 font-semibold  max-w-max ">Today</div>
                     <p className="chat-time  text-end mt-6">10:25 am</p>
                     <p className="chat-my-message">Hello</p>
@@ -58,13 +65,13 @@ const Teachers = () => {
                     </div>
                     <p className="chat-time  text-end mt-6">10:26 am</p>
                     <p className="chat-my-message">Yes Sure</p>
-                    {message.map((msg, index) => (
+                    {saveMessages.map((msgi, index) => (
                         <div key={index}>
-                            <p className="chat-time text-end mt-6">{msg.time}</p>
-                            <p className="chat-my-message">{msg.text}</p>
-                        </div>
-                    ))}
+                            <p className="chat-time  text-end mt-6">{msgi.time}</p>
+                            <p className="chat-my-message">{msgi.text}</p>
 
+                        </div>))}
+                    <div ref={messagesEndRef} className="pt-7" />
 
                 </div>
 
@@ -75,8 +82,8 @@ const Teachers = () => {
                             type="text"
                             placeholder="Type your message..."
                             className="input-message "
-                            onChange={(e) => setSendMessage(e.target.value)}
                             value={sendMessage}
+                            onChange={(e) => setSendMessage(e.target.value)}
                         />
                     </label>
 
@@ -87,9 +94,9 @@ const Teachers = () => {
 
     );
 };
-export default Teachers; */
+export default Teachers;
 
-import { useState, useRef, useEffect } from "react";
+/* import { useState, useRef, useEffect } from "react";
 import Subheading from "@components/ui/Subheading";
 import AuthorRonaldImg from "../CoursesPageCard/img/author.webp";
 import Subtitle from "@components/ui/Subtitle";
@@ -102,7 +109,7 @@ const formatTime = (date) => {
         minute: '2-digit',
         hour12: true
     });
-    return formatter.format(date);
+    return formatter.format(date).toLowerCase();
 };
 
 const Teachers = () => {
@@ -137,7 +144,7 @@ const Teachers = () => {
                     </div>
                     <DotsIcon />
                 </div>
-                <div className="flex flex-col border-y border-grey-border py-7 px-4 overflow-y-auto max-h-[460px]">
+                <div className="flex flex-col border-y border-grey-border pt-7 px-4 overflow-y-auto max-h-[460px]">
                     <div className="mx-auto text-center p-2 border border-grey-border bg-grey-100 rounded-lg text-xs text-grey-900 font-semibold max-w-max">
                         Today
                     </div>
@@ -161,8 +168,9 @@ const Teachers = () => {
                             <p className="chat-my-message">{msg.text}</p>
                         </div>
                     ))}
-                    <div ref={messagesEndRef} /> {/* Реф для прокручування */}
+                    <div ref={messagesEndRef} className="pt-7" />
                 </div>
+
 
                 <form className="flex px-4 pt-4 gap-4" onSubmit={handleSendMessage}>
                     <label htmlFor="typeMessage" className="w-full">
@@ -184,3 +192,4 @@ const Teachers = () => {
 };
 
 export default Teachers;
+ */

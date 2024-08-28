@@ -104,7 +104,8 @@ module.exports = {
       "black": "#000000",
       "error-600": "#DC2626",
       "red-youtube": "#fe0000",
-      "primary-50": "#EFF6FF"
+      "primary-50": "#EFF6FF",
+      "blue-scrol": '#66ccff'
     },
 
   },

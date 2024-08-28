@@ -18,8 +18,10 @@ const ProfileTabsSlider = () => {
                 spaceBetween={24}
                 slidesPerView="auto"
                 speed={1000}
+
                 modules={[Autoplay, Pagination]}
                 autoplay={{
+                    delay: 2000,
                     disableOnInteraction: false,
                 }}
                 pagination={{
