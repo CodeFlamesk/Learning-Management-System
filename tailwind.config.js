@@ -80,6 +80,7 @@ module.exports = {
       "grey": "#334155",
       "blue": "#3B82F6",
       "yellow": "#FEC84B",
+      "blue-lite": "#dbf4fa",
       "sl-blue": "#7FA3D6",
       "blue-600": "#1479FF",
       "grey-text-light": "#64748B",

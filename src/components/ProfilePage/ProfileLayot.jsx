@@ -15,7 +15,7 @@ const ProfileLayout = () => {
         <>
 
             <Header />
-            <Container styles="pt-6 tb:pt-10">
+            <Container styles="pt-6 tb:pt-10 mb-auto">
 
                 <div className="flex flex-col tb:flex-row tb:justify-between gapx-4 relative ">
 
@@ -23,7 +23,7 @@ const ProfileLayout = () => {
 
 
 
-                    <div className="flex tb:basis-[74%]">
+                    <div className="flex tb:basis-[74%]  overflow-hidden ">
                         <Outlet />
                     </div>
                 </div>

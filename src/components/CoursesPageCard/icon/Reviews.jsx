@@ -2,9 +2,7 @@
 const ReviewsIcon = () => {
 	return (
 		<svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-			<desc>
-				Created with Pixso.
-			</desc>
+
 			<defs>
 				<clipPath id="clip930_12891">
 					<rect id="award-03" width="24.000000" height="24.000000" fill="white" fill-opacity="0" />

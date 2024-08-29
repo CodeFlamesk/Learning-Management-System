@@ -39,7 +39,6 @@ const Message = () => {
             </div>
             <div className="flex flex-col p-4 w-full border  border-grey-border rounded-2xl mt-4 gap-4">
                 <div className="flex  w-full items-center">
-
                     <img src={AuthorDevonImg} alt="AuthorDevonImg" className="w-10 h-10 rounded-full" />
                     <Subheading title="Devon Lane" styles="pl-2" />
                     <SmallText title="18th March, 2024" styles="ml-auto" />
