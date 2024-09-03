@@ -1,6 +1,6 @@
 
 import Star from './icon/Star';
-import CoursesImg from "./img/CoursesImg.svg";
+import CoursesImg from "./img/CoursesImg.png";
 import Subtitle from '@/components/ui/Subtitle';
 import Rating from './Rating';
 

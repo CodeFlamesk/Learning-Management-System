@@ -1,6 +1,6 @@
 
 import Star from '@components/Courses/icon/Star';
-import CoursesImg from "../Courses/img/CoursesImg.svg";
+import CoursesImg from "../Courses/img/CoursesImg.png";
 import HeaderBlock from '@components/HeadersBlock/HeaderBlock';
 import SliderButton from '@components/ui/buttons/SliderButton';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -10,15 +10,6 @@ import { Navigation } from 'swiper/modules';
 import Subtitle from '@components/ui/Subtitle';
 import Rating from '@components/Courses/Rating';
 import SubheadingM from '@components/ui/SubheadingM';
-
-
-
-
-
-
-
-
-
 const data = [
     {
         coursesImg: CoursesImg,

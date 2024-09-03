@@ -2,15 +2,9 @@ import MainTitle from "@/components/ui/MainTitle"
 import ButtonFilter from "@/components/ui/buttons/ButtonFilter"
 import FilterIcon from '@/components/PageCategories/icon/Filter'
 import SelectMenu from "./SelectMenu"
-import Subtitle from '@/components/ui/Subtitle';
-import SubheadingM from '@/components/ui/SubheadingM';
-import Star from "@/components/Courses/icon/Star"
-import Rating from "@/components/Courses/Rating"
-import CoursesImg from "./img/CoursesImg.svg"
+
 import CoursesFilter from "@/components/ui/CoursesFilter";
-import ArrowPagination from "./icon/ArrowPagination";
-import { Inspect } from "lucide-react";
-import CoursesPagination from "./CoursesPagination";
+
 import PagePagination from "./PagePagination";
 
 
@@ -42,7 +36,7 @@ const AllCourses = () => {
 
                     </div>
                     <PagePagination />
-                    {/* <CoursesPagination></CoursesPagination> */}
+
                 </div>
 
             </div>

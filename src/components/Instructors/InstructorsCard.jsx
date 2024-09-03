@@ -1,7 +1,4 @@
 import Star from "@/components/Courses/icon/Star";
-
-import HeaderBlock from '@/components/HeadersBlock/HeaderBlock';
-import BlueButtonText from '@/components/ui/buttons/BlueButtonText';
 import Subtitle from "@/components/ui/Subtitle";
 import SmallText from "@/components/ui/SmallText";
 import InstructorsImg from "./img/InstructorsImg.svg"
@@ -56,7 +53,7 @@ const data = [
 const InstructorsCard = () => {
     return (
         <div>
-           
+
             <div className="grid grid-cols-1 ft:grid-cols-2 ss:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 place-items-center pb-7 sm:pb-14">
                 {
                     data.map((item) => {

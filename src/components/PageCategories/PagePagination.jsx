@@ -712,11 +712,11 @@ const PagePagination = () => {
     const prevPage = () => setCurrentPage(prev => prev - 1);
 
     return (
-        <div className="mt-5">
+        <div className="mt-5 ">
             <h1>Тестова карта</h1>
             <CoursesPagination data={currentItems} currentPage={currentPage} />
 
-            <div className="flex justify-center pt-6 pb-60w">
+            <div className="flex justify-center pt-6  ">
                 <button className="pagination-courses text-gray-900 rounded-l-4r hover:text-blue-500 group" onClick={prevPage}>
                     <ArrowPagination className="group-hover:scale-125 transition-all duration-300" />
                 </button>

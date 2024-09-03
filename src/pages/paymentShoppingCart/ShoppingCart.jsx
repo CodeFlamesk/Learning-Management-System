@@ -73,7 +73,7 @@ const ShoppingCart = () => {
                                 <div className='flex gap-1.5 pt-2'>
                                     <button className="relative inline-block pb-1 group">
                                         <SmallText title="Save for later" styles="text-primary-500" />
-                                        <span className="absolute bg-primary-500 left-1/2 bottom-1 transform -translate-x-1/2 w-0 h-0.5 bg-current transition-all duration-300 group-hover:w-full"></span>
+                                        <span className="absolute bg-primary-500 left-1/2 bottom-1 transform -translate-x-1/2 w-0 h-0.5  transition-all duration-300 group-hover:w-full"></span>
                                     </button>
 
                                     <SmallText title="|" />
@@ -81,7 +81,7 @@ const ShoppingCart = () => {
                                     <button className="relative text-error-600  inline-block pb-1 group">
                                         <p className='text-error-600 text-xs sm:text-sm font-normal leading-5'>Remove</p>
 
-                                        <span className="absolute bg-error-600 left-1/2 bottom-1 transform -translate-x-1/2 w-0 h-0.5 bg-current transition-all duration-300 group-hover:w-full"></span>
+                                        <span className="absolute bg-error-600 left-1/2 bottom-1 transform -translate-x-1/2 w-0 h-0.5  transition-all duration-300 group-hover:w-full"></span>
                                     </button>
 
                                 </div>
@@ -161,7 +161,7 @@ const ShoppingCart = () => {
                                 <div className='flex gap-1.5 pt-2'>
                                     <button className="relative inline-block pb-1 group">
                                         <SmallText title="Save for later" styles="text-primary-500" />
-                                        <span className="absolute bg-primary-500 left-1/2 bottom-1 transform -translate-x-1/2 w-0 h-0.5 bg-current transition-all duration-300 group-hover:w-full"></span>
+                                        <span className="absolute bg-primary-500 left-1/2 bottom-1 transform -translate-x-1/2 w-0 h-0.5  transition-all duration-300 group-hover:w-full"></span>
                                     </button>
 
                                     <SmallText title="|" />
@@ -169,7 +169,7 @@ const ShoppingCart = () => {
                                     <button className="relative text-error-600  inline-block pb-1 group">
                                         <p className='text-error-600 text-xs sm:text-sm font-normal leading-5'>Remove</p>
 
-                                        <span className="absolute bg-error-600 left-1/2 bottom-1 transform -translate-x-1/2 w-0 h-0.5 bg-current transition-all duration-300 group-hover:w-full"></span>
+                                        <span className="absolute bg-error-600 left-1/2 bottom-1 transform -translate-x-1/2 w-0 h-0.5  transition-all duration-300 group-hover:w-full"></span>
                                     </button>
 
                                 </div>

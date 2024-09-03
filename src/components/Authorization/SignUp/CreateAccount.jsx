@@ -6,6 +6,7 @@ import Facebook from "@components/Authorization/img/facebook.webp";
 import Microsoft from "@components/Authorization/img/microsoft.webp";
 import Google from "@components/Authorization/img/google.webp";
 import SmallText from "@components/ui/SmallText";
+import { useNavigate } from "react-router-dom";
 
 const CreateAcc = () => {
     const [fullName, setFullName] = useState('');
@@ -14,7 +15,7 @@ const CreateAcc = () => {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
-
+    const navigate = useNavigate();
     const handleSubmit = (e) => {
         e.preventDefault();
         if (password !== confirmPassword) {
@@ -22,7 +23,7 @@ const CreateAcc = () => {
             return;
         }
         setErrorMessage("");
-        console.log('Form submitted'); // Логіка відправки форми
+        navigate("/login"); // Логіка відправки форми
     };
 
     return (
@@ -38,11 +39,11 @@ const CreateAcc = () => {
                         <label>
                             <h5 className="heading-5pt">Full Name</h5>
                         </label>
-                        <div className="flex flex-col ft:flex-row gap-2 ft:gap-4">
+                        <div className="flex flex-col ft:flex-row gap-2 ft:gap-4 " >
                             <input
                                 type="text"
                                 placeholder="First Name"
-                                className="inputs"
+                                className="inputs input-shadow "
                                 value={fullName}
                                 onChange={(e) => setFullName(e.target.value)}
                                 required
@@ -50,7 +51,7 @@ const CreateAcc = () => {
                             <input
                                 type="text"
                                 placeholder="Last Name"
-                                className="inputs"
+                                className="inputs input-shadow "
                                 required
                             />
                         </div>
@@ -62,7 +63,7 @@ const CreateAcc = () => {
                             id="username"
                             type="text"
                             placeholder="Username"
-                            className="inputs"
+                            className="inputs input-shadow "
                             value={username}
                             onChange={(e) => setUsername(e.target.value)}
                             required
@@ -75,7 +76,7 @@ const CreateAcc = () => {
                             id="emailSign"
                             type="email"
                             placeholder="Email ID"
-                            className="inputs"
+                            className="inputs input-shadow "
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             required
@@ -84,13 +85,15 @@ const CreateAcc = () => {
                         <div className="flex flex-col ft:flex-row ft:gap-4">
                             <div className="w-full">
                                 <label htmlFor="password">
-                                    <h5 className="heading-5pt">Password</h5>
+                                    <h5 className="heading-5pt" >Password</h5>
                                 </label>
                                 <input
                                     id="password"
                                     type="password"
                                     placeholder="Enter Password"
-                                    className="inputs"
+                                    className="inputs input-shadow "
+                                    minLength="6"
+                                    maxLength="13"
                                     value={password}
                                     onChange={(e) => setPassword(e.target.value)}
                                     required
@@ -104,7 +107,9 @@ const CreateAcc = () => {
                                     id="confirmPassword"
                                     type="password"
                                     placeholder="Confirm Password"
-                                    className="inputs"
+                                    className={` ${errorMessage ? 'border-red-youtube inputs input-shadow -password' : 'inputs input-shadow '}`}
+                                    minLength="6"
+                                    maxLength="13"
                                     value={confirmPassword}
                                     onChange={(e) => setConfirmPassword(e.target.value)}
                                     required
@@ -120,6 +125,7 @@ const CreateAcc = () => {
                             <div>Create Account</div>
                             <div><ArrowButton /></div>
                         </button>
+
                     </form>
 
                     <div className="flex gap-3 pt-9">

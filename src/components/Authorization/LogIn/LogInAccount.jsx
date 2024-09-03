@@ -37,7 +37,7 @@ const LogInAcc = () => {
                         id="emailLog"
                         type="email"
                         placeholder="Username or Email ID"
-                        className="inputs"
+                        className="inputs input-shadow "
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         required
@@ -51,7 +51,7 @@ const LogInAcc = () => {
                             id="password"
                             type="password"
                             placeholder="Enter Password"
-                            className="inputs"
+                            className="inputs input-shadow "
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                             required
@@ -66,7 +66,7 @@ const LogInAcc = () => {
                             id="confirmPassword"
                             type="password"
                             placeholder="Confirm Password"
-                            className="inputs"
+                            className="inputs input-shadow "
                             value={confirmPassword}
                             onChange={(e) => setConfirmPassword(e.target.value)}
                             required
@@ -144,7 +144,7 @@ const LogInAcc = () => {
                     </label>
                     <input id="emailLog" type="email"
                         placeholder="Username or Email ID"
-                        className="inputs" required />
+                        className="inputs input-shadow " required />
 
                     <div>
                         <label htmlFor="password">
@@ -152,7 +152,9 @@ const LogInAcc = () => {
                         </label>
                         <input id="password" type="password"
                             placeholder="Enter Password"
-                            className="inputs" required />
+                            minLength="6"
+                            maxLength="13"
+                            className="inputs input-shadow " required />
 
                     </div>
 

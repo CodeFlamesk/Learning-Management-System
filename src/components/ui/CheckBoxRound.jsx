@@ -31,7 +31,7 @@ const CheckBoxRound = ({ id, style }) => {
                         </label>
                         <input id="country" type="text" name="country"
                             placeholder="Enter Country"
-                            className="inputs-checkout" required />
+                            className="inputs-checkout input-shadow " required />
                     </div>
                     <div className="flex-col w-full">
                         <label htmlFor="state">
@@ -39,7 +39,7 @@ const CheckBoxRound = ({ id, style }) => {
                         </label>
                         <input id="state" type="text"
                             placeholder="Enter State"
-                            className="inputs-checkout" name="state" required />
+                            className="inputs-checkout input-shadow " name="state" required />
                     </div>
                 </div>
 
@@ -71,26 +71,27 @@ const CheckBoxRound = ({ id, style }) => {
                                 <label htmlFor="nameCard">
                                     <SmallText title="State/Union Territory" styles="flex inline-flex cursor-pointer" />
                                 </label>
-                                <input id="nameCard" type="text" placeholder="Name of card" name="nameCard" className="inputs-checkout" required />
+                                <input id="nameCard" type="text" placeholder="Name of card" name="nameCard" className="inputs-checkout input-shadow " required />
                             </div>
                             <div>
                                 <label htmlFor="cardNumber">
                                     <SmallText title="Card Number" styles="flex inline-flex cursor-pointer" />
                                 </label>
-                                <input id="cardNumber" type="text" placeholder="Card Number" name="cardNumber" className="inputs-checkout" required />
+                                <input id="cardNumber" type="text" placeholder="Card Number" name="cardNumber" className="inputs-checkout input-shadow " required />
                             </div>
                             <div className="flex flex-col tb:flex-row tb:justify-between gap-17w ">
                                 <div className="flex-col w-full">
                                     <label htmlFor="expiryDate">
                                         <SmallText title="Expiry Date" styles="flex inline-flex cursor-pointer" />
                                     </label>
-                                    <input id="expiryDate" placeholder="Expiry Date" type="text" name="expiry-date" className="inputs-checkout" required />
+                                    <input id="expiryDate" placeholder="Expiry Date" type="text" name="expiry-date" className="inputs-checkout input-shadow " required />
                                 </div>
                                 <div className=" flex-col w-full ">
                                     <label htmlFor="cvc" >
                                         <SmallText title="CVC/CVV" styles="flex inline-flex cursor-pointer" />
                                     </label>
-                                    <input id="cvc" type="text" name="CVC/CVV" placeholder="CVC/CVV" className="inputs-checkout" required />
+                                    <input id="cvc" type="text" minLength='3'
+                                        name="CVC/CVV" placeholder="CVC/CVV" className="inputs-checkout input-shadow " required />
                                 </div>
                             </div>
                         </div>

@@ -14,7 +14,11 @@ module.exports = {
         '40': '40px',
         '56': '56px',
       },
+
+      borderColor: ['focus', 'valid', 'invalid'],
+      outlineColor: ['focus', 'valid', 'invalid'],
       screens: {
+
         'xs': '360px',
         'ft': '420px',
         'ff': '440px',
@@ -25,7 +29,6 @@ module.exports = {
         'tfe': '348px',
         'mde': '800px',
         'tb': '991.98px',
-        /* 'thhs': '1170px', */
         'ct': '1344px',
         '3xl': '1920px'
       },
@@ -33,9 +36,7 @@ module.exports = {
         '32fz': '32px',
         '40': '40px',
       },
-      /*    boxShadow: {
-           'shadowPromotion': '0px 0px 8px 0px rgba(59, 130, 246, 0.12)',
-         }, */
+
       spacing: {
         '1w': '1px',
         '17w': '17px',
@@ -71,6 +72,7 @@ module.exports = {
       borderRadius: {
         '4r': '4px',
         '5r': '5px',
+        '60r': '60px',
       },
 
     },
@@ -106,7 +108,8 @@ module.exports = {
       "error-600": "#DC2626",
       "red-youtube": "#fe0000",
       "primary-50": "#EFF6FF",
-      "blue-scrol": '#66ccff'
+      "blue-scrol": "#66ccff",
+
     },
 
   },

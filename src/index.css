@@ -3,10 +3,12 @@
 @tailwind components;
 @tailwind utilities;
 
-
+.body {
+  height: 100%;
+}
 
 @layer base {
-  body {
+  .bodys {
     font-family: 'Inter';
     font-weight: 400;
     font-display: swap;
@@ -113,7 +115,27 @@
 
 
 .inputs {
-  @apply mt-1 p-2 ft:p-4 text-primary-500 focus:border-blue focus:outline-none placeholder:text-bts-grey text-base leading-relaxed font-normal rounded-lg border border-grey-border border-solid h-10 md:h-58 w-full;
+  @apply mt-1 p-2 ft:p-4 text-primary-500 focus:border-blue focus:outline-none placeholder:text-bts-grey text-base leading-relaxed font-normal rounded-lg border border-grey-border border-2 h-10 md:h-58 w-full;
+}
+
+.inputs-password {
+  @apply mt-1 p-2 ft:p-4 text-primary-500 focus:outline-none placeholder:text-bts-grey text-base leading-relaxed font-normal rounded-lg border border-solid h-10 md:h-58 w-full;
+}
+
+
+/* Синій колір при фокусі */
+.inputs:focus {
+  @apply border-blue;
+}
+
+/* Зелений колір для валідних полів (після втрати фокусу) */
+.inputs:valid:not(:placeholder-shown) {
+  @apply border-green-link;
+}
+
+/* Червоний колір для невалідних полів після втрати фокусу */
+.inputs:invalid:not(:placeholder-shown):not(:focus) {
+  @apply border-red-youtube;
 }
 
 .input-message {
@@ -121,8 +143,32 @@
 }
 
 .inputs-checkout {
-  @apply mt-1 p-2 mt-2 ft:p-4 text-primary-500 focus:border-blue focus:outline-none placeholder:text-bts-grey text-base leading-relaxed font-normal rounded-lg border border-grey-border border-solid h-10 md:h-58 w-full;
+  @apply mt-1 p-2 mt-2 ft:p-4 text-primary-500 focus:outline-none placeholder:text-bts-grey text-base leading-relaxed font-normal rounded-lg border border-solid h-10 md:h-58 w-full border-grey-border focus:border-blue;
 }
+
+
+/* Сірий колір бордера за замовчуванням */
+.inputs-checkout:placeholder-shown {
+  @apply border-grey-border;
+}
+
+/* Синій колір при фокусі */
+.inputs-checkout:focus {
+  @apply border-blue;
+}
+
+/* Зелений колір для валідних полів (після втрати фокусу) */
+.inputs-checkout:valid:not(:placeholder-shown) {
+  @apply border-green-link;
+}
+
+/* Червоний колір для невалідних полів після втрати фокусу */
+.inputs-checkout:invalid:not(:placeholder-shown):not(:focus) {
+  @apply border-red-youtube;
+}
+
+
+
 
 .button-account {
   @apply flex py-2.5 px-5 gap-x-1.5 bg-text-dark text-white items-center text-sm rounded-lg transition-all duration-300 hover:bg-primary-500 transition-all duration-300 transform hover:translate-x-0.5 hover:translate-y-0.5 w-full justify-center mt-4 ft:mt-5 md:justify-start px-6 py-3 md:w-183;
@@ -134,7 +180,7 @@
 }
 
 .pagination-courses {
-  @apply flex justify-center items-center min-w-43 min-h-41 border border-grey-border text-xs font-semibold leading-4 hover:text-blue transition-all duration-300 hover:border-blue;
+  @apply flex justify-center items-center min-w-43 min-h-41 border text-xs font-semibold leading-4 hover:text-blue transition-all duration-300 hover:border-blue;
 }
 
 .button-tabs {
@@ -241,4 +287,24 @@
   background-color: #ddd;
   width: 0%;
   transition: 0.3s;
+}
+
+.input-shadow {
+  box-shadow: inset 0px 0px 0px 30px #FFFFFF;
+}
+
+.page-container {
+  @apply flex flex-col min-h-screen;
+}
+
+.button-line {
+  @apply relative items-center text-error-600 inline-block pb-1;
+}
+
+.text-line {
+  @apply text-error-600 text-base sm:text-sm font-normal leading-5 pb-0.5;
+}
+
+.red-line {
+  @apply absolute bg-error-600 left-1/2 bottom-1 transform -translate-x-1/2 w-0 h-0.5 transition-all duration-300;
 }

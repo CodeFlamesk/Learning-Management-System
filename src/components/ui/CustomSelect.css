@@ -1,3 +1,13 @@
+.custom-select__arrow {
+    transition: transform 0.2s ease;
+    /* Додає плавний перехід для анімації */
+}
+
+.custom-select__arrow.open {
+    transform: rotate(180deg);
+    /* Перевертання стрілки */
+}
+
 .custom-select {
     position: relative;
 
@@ -105,6 +115,67 @@
     position: absolute;
     top: 8px;
     left: 10px;
+
+
+}
+
+
+.custom-select__show {
+    display: flex;
+
+    justify-content: space-between;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 10px;
+    padding-right: 4px;
+    background-color: #FFFFFF;
+    border: 1px solid #0F172A;
+    border-radius: 1px;
+    font-weight: 500;
+    font-size: 14;
+    border-radius: 8px;
+    min-width: 80px;
+}
+
+.custom-select__show-option {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    max-height: 300px;
+    overflow-y: auto;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 6px;
+    border-top: none;
+    z-index: 1000;
+    text-align: center;
+    font-weight: 500;
+    font-size: 14;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+
+}
+
+.custom-select__option-show {
+
+    position: relative;
+    padding: 8px 10px;
+    cursor: pointer;
+}
+
+.custom-select__option-show:hover,
+.custom-select__option-show.selected {
+    background-color: #f0f0f0;
+}
+
+.selected-option-show {
+    position: absolute;
+    top: 8px;
+    left: 5px;
 
 
 }

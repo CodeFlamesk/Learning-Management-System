@@ -1,6 +1,4 @@
 import Checkout from './imgBecome/Checkout.webp'
-import StartInstructor from './imgBecome/StartInstructor.webp'
-import ArrowButtom from '../../ui/buttons/icon/ArrowButton'
 import Subheading from '@/components/ui/Subheading'
 import BlackButton from '@/components/ui/buttons/BlackButton'
 import ArrowButton from '../../ui/buttons/icon/ArrowButton'
@@ -36,7 +34,7 @@ const CheckoutCourses = () => {
 
 const CheckoutCourse = ({ title, text, buttonText, becomeImg, iconComponent }) => {
     return (
-        <div className='flex flex-col flex-col-reverse fs:flex-row justify-between md:gap-x-36 gap-4 items-center mde:justify-center'>
+        <div className='flex flex-col-reverse fs:flex-row justify-between md:gap-x-36 gap-4 items-center mde:justify-center'>
 
             <div className='flex flex-col items-center text-center fs:text-left fs:items-start max-w-96 md:max-w-full /* md:w-2/5 */ '>
                 <Subheading title={title} />
