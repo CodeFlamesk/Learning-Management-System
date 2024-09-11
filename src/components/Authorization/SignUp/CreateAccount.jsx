@@ -15,7 +15,7 @@ const CreateAcc = () => {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
-    const navigate = useNavigate();
+
     const handleSubmit = (e) => {
         e.preventDefault();
         if (password !== confirmPassword) {
@@ -23,7 +23,10 @@ const CreateAcc = () => {
             return;
         }
         setErrorMessage("");
-        navigate("/login"); // Логіка відправки форми
+        navigate("/login");
+
+
+
     };
 
     return (
@@ -139,15 +142,15 @@ const CreateAcc = () => {
                     </div>
 
                     <div className="flex flex-col sm:flex-row gap-4 pt-6 pb-11 md:pb-40 justify-center">
-                        <a className="flex justify-center items-center bg-white p-3 gap-2 rounded-lg border border-solid border-grey-border duration-300 transition-all hover:border-primary-500 w-full" href="">
+                        <a href="https://example.com" target="_blank" className="flex justify-center items-center bg-white p-3 gap-2 rounded-lg border border-solid border-grey-border duration-300 transition-all hover:border-primary-500 w-full" >
                             <img src={Facebook} alt="Facebook" className="w-6 h-6" />
                             <SmallText title={"Facebook"} styles={" text-primary-500 "} />
                         </a>
-                        <a className="flex justify-center items-center bg-white p-3 gap-2 rounded-lg border border-solid border-grey-border duration-300 transition-all hover:border-orange w-full" href="">
+                        <a href="https://example.com" target="_blank" className="flex justify-center items-center bg-white p-3 gap-2 rounded-lg border border-solid border-grey-border duration-300 transition-all hover:border-orange w-full" >
                             <img src={Google} alt="Google" className="w-6 h-6" />
                             <SmallText title={"Google"} styles={" text-orange "} />
                         </a>
-                        <a className="flex justify-center items-center bg-white p-3 gap-2 rounded-lg border border-solid border-grey-border duration-300 transition-all hover:border-black w-full" href="">
+                        <a href="https://example.com" target="_blank" className="flex justify-center items-center bg-white p-3 gap-2 rounded-lg border border-solid border-grey-border duration-300 transition-all hover:border-black w-full">
                             <img src={Microsoft} alt="Microsoft" className="w-6 h-6" />
                             <SmallText title={"Microsoft"} styles={" text-black "} />
                         </a>

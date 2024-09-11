@@ -119,7 +119,7 @@ const CourseSlide = ({ coursesImg, title, author, rating, info, price, }) => {
 }
 const CourseSlider = () => {
     return (
-        <div className='max-w-screen-ct mx-auto px-5 sm:px-8'>
+        <div className='max-w-screen-ct mx-auto px-5 sm:px-8 '>
 
             <div className={`flex flex-col ft:flex-row tfe:flex-nowrap  justify-between gap-3 sm:gap-5  mb-8 pt-7 sm:pt-14 items-center `} >
                 <div className='flex flex-wrap w-full justify-center ft:justify-start'>

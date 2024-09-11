@@ -10,6 +10,7 @@ import Chat from "./Сhat";
 import ProfilesFilter from "./ProfilesFilter";
 
 const Message = () => {
+
     return (
         <div className="flex flex-col w-full pb-6">
 

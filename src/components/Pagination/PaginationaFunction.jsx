@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Subheading from '@components/ui/Subheading';
 import CustomShow from './ShowCard';
 import ArrowPagination from '@components/PageCategories/icon/ArrowPagination';
@@ -47,6 +47,7 @@ const PaginationFunction = ({ data, renderItem, itemsPerPage: initialItemsPerPag
 
     const prevPage = () => setCurrentPage(prev => Math.max(prev - 1, 1));
     const nextPage = () => setCurrentPage(prev => Math.min(prev + 1, totalPages));
+
     const numberPagination = (currentPage, totalPages) => {
         if (totalPages <= 3) {
             return Array.from({ length: totalPages }, (_, index) => index + 1);
@@ -59,10 +60,16 @@ const PaginationFunction = ({ data, renderItem, itemsPerPage: initialItemsPerPag
         }
         return [currentPage - 1, currentPage, currentPage + 1];
     };
+    const paginationScrollRef = useRef(null);
+    useEffect(() => {
+        if (paginationScrollRef.current) {
+            paginationScrollRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
+        }
+    }, [currentPage]);
     return (
         <div className='flex flex-col'>
-            <div className='flex justify-between items-center pb-4 relative'>
+            <div ref={paginationScrollRef} className='flex justify-between items-center pb-4 relative'>
                 <div className='flex items-end gap-1'>
                     <Subheading title={title} />
                     <p className='text-xs font-semibold grey-900 pb-1'>({data.length})</p>

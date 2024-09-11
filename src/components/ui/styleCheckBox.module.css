@@ -8,6 +8,35 @@
     padding-left: 26px;
 }
 
+.checkbox-wrapper-buy {
+    display: flex;
+
+    cursor: pointer;
+    position: relative;
+    margin: 8px 0;
+    align-items: center;
+    padding-left: 26px;
+
+}
+
+
+
+
+
+.checkbox-element-buy {
+    appearance: none;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    margin: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #E2E8F0;
+    border-radius: 3px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
 .checkbox-element {
     appearance: none;
     position: absolute;
@@ -27,6 +56,12 @@
 
 }
 
+.checkbox-element-buy:checked {
+    background-color: #2b60d2;
+    border-color: #2b60d2;
+
+}
+
 .checkbox-element:checked {
     background-color: #2b60d2;
     border-color: #2b60d2;
@@ -34,6 +69,20 @@
 }
 
 .checkbox-element:checked::before {
+    content: "";
+    cursor: pointer;
+    display: block;
+    width: 5px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0px;
+    position: absolute;
+    top: 3px;
+    left: 6px;
+    transform: rotate(45deg);
+}
+
+.checkbox-element-buy:checked::before {
     content: "";
     cursor: pointer;
     display: block;
@@ -100,15 +149,15 @@
     width: 110px;
     height: 22px;
     background: rgba(43, 166, 210, 0.2);
-    /* Напівпрозорий фон */
+
     border-radius: 5px;
-    /* Закруглені краї */
+
     position: absolute;
     top: -11px;
     left: -3px;
     box-shadow: 0 0 10px rgba(43, 168, 210, 0.5);
-    /* Тінь для ефекту */
+
     z-index: 11;
-    /* Щоб фон був позаду зірочок */
+
     transition: all 0.3s ease-in-out;
 }

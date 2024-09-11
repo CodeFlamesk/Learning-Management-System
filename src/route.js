@@ -103,6 +103,11 @@ export const publicRoutes = [
         Component: MyReviews,
         name: "MyReviews"
     },
+    {
+        path: MYBOUGHTCOURSE,
+        Component: MyBoughtCourse,
+        name: "MyBoughtCourse"
+    },
 
 
 ]

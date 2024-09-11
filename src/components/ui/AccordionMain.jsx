@@ -12,7 +12,7 @@ const Accordion = AccordionPrimitive.Root
 const AccordionItem = React.forwardRef(({ className, ...props }, ref) => (
   <AccordionPrimitive.Item
     ref={ref}
-    /*   className={cn("border-b border-grey-300", className)} */
+    /* className={cn("border-b border-grey-300", className)} */
     {...props}
   />
 ))
@@ -35,10 +35,10 @@ const AccordionTrigger = React.forwardRef(({ className, children, ...props }, re
 ))
 AccordionTrigger.displayName = "AccordionTrigger"
 
-const AccordionContent = React.forwardRef(({ className, children, ...props }, ref) => (
+const AccordionContent = React.forwardRef(({ styles, className, children, ...props }, ref) => (
   <AccordionPrimitive.Content
     ref={ref}
-    className="overflow-hidden text-sm px-3 transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down bg-white z-10"
+    className={cn("overflow-hidden text-sm px-3 transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down bg-white z-10", styles)}
     {...props}
   >
     <div className={cn("flex flex-col pb-4 pt-0 gap-y-3.5 h-full", className)}>{children}</div>
@@ -46,13 +46,24 @@ const AccordionContent = React.forwardRef(({ className, children, ...props }, re
 ))
 AccordionContent.displayName = "AccordionContent"
 
+const AccordionContentN = React.forwardRef(({ styles, className, children, ...props }, ref) => (
+  <AccordionPrimitive.Content
+    ref={ref}
+    className={cn("overflow-hidden text-sm px-3 transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down bg-white z-10", styles)}
+    {...props}
+  >
+    <div className={cn("flex flex-col pt-0 gap-y-3.5 h-full", className)}>{children}</div>
+  </AccordionPrimitive.Content>
+))
+AccordionContentN.displayName = "AccordionContentN"
+
 // Другий варіант акордеону зі стрілкою зліва
 const AccordionTriggerArrowLeft = React.forwardRef(({ className, children, ...props }, ref) => (
   <AccordionPrimitive.Header className="flex">
     <AccordionPrimitive.Trigger
       ref={ref}
       className={cn(
-        "flex flex-1 items-center w-full  py-4 px-3 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180",
+        "flex flex-1 items-center w-full py-4 px-3 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180",
         className
       )}
       {...props}
@@ -64,4 +75,4 @@ const AccordionTriggerArrowLeft = React.forwardRef(({ className, children, ...pr
 ))
 AccordionTriggerArrowLeft.displayName = "AccordionTriggerArrowLeft"
 
-export { Accordion, AccordionItem, AccordionTrigger, AccordionTriggerArrowLeft, AccordionContent }
+export { Accordion, AccordionItem, AccordionTrigger, AccordionTriggerArrowLeft, AccordionContent, AccordionContentN }

@@ -4,8 +4,6 @@ import google from './img/google-logo.webp';
 import microsoft from './img/microsoft-logo.webp';
 import twitter from './img/twitter-logo.webp';
 import logoFooter from './img/logo-footer.webp';
-import SmallText from '@/components/ui/SmallText';
-import Subheading from '@/components/ui/Subheading';
 import ButtonText from '@/components/ui/buttons/ButtonText';
 import FooterTitle from '@/components/ui/FooterTitle';
 import FooterSmallText from '@/components/ui/FooterSmallText';

@@ -24,6 +24,13 @@ import Teachers from './ProfilePage/Teachers';
 import Message from './ProfilePage/Message';
 import MyReviews from './ProfilePage/MyReviews';
 import MyCourses from './ProfilePage/MyCourses';
+import DescriptionBoughtCourse from '@pages/MyBoughtCourse/DetailsBoughtCourse';
+
+import LayoutBoughtCourse from '@pages/MyBoughtCourse/LayoutBoughtCourse';
+import InstructorBoughtCourse from '@pages/MyBoughtCourse/InstructorBoughtCourse';
+import ReviewsBoughtCourse from '@pages/MyBoughtCourse/ReviewsBoughtCourse';
+import CoursesBoughtCourse from '@pages/MyBoughtCourse/CoursesBoughtCourse';
+
 
 
 const AppRouter = () => {
@@ -43,9 +50,14 @@ const AppRouter = () => {
 
 
             </Route>
+            <Route path="/bought-course/:index" element={<LayoutBoughtCourse />}>
+                {<Route path="description" element={<DescriptionBoughtCourse />} />}
+                {<Route path="instructors" element={<InstructorBoughtCourse />} />}
+                {<Route path="courses" element={<CoursesBoughtCourse />} />}
+                {<Route path="reviews" element={<ReviewsBoughtCourse />} />}
+            </Route>
 
             <Route path="myprofile" element={<ProfileLayout />}>
-
                 <Route path="profile" element={<Profile />} />
                 <Route path="my-courses" element={<MyCourses />} />
                 <Route path="teachers" element={<Teachers />} />

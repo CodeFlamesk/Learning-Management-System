@@ -1,10 +1,11 @@
 import Star from "@components/Courses/icon/Star";
 import PaginationFunction from "@components/Pagination/PaginationaFunction";
 import CoursesImg from "../Courses/img/CoursesImg.png";
-import Subtitle from '@/components/ui/Subtitle';
+
 import Rating from "@components/Courses/Rating";
-import SubheadingM from "@components/ui/SubheadingM";
+
 import ProfilesFilter from "./ProfilesFilter";
+import { Link } from "react-router-dom";
 
 
 const data = [
@@ -121,11 +122,13 @@ const MyCourses = () => {
                 stylesRender="grid grid-cols-1 items-center  xs:grid-cols-2 sm:gap-x-5 mx-auto sm:mx-0 sm:grid-cols-3   gap-4 sm:gap-9 sm:place-items-center"
 
                 renderItem={(item, index) => (
+                    <Link to={`/bought-course/:index/description`} >
+                        <MyCoursesItem
+                            key={item.title + index}
+                            {...item}
+                        />
+                    </Link>
 
-                    <MyCoursesItem
-                        key={item.title + index}
-                        {...item}
-                    />
                 )} >  <ProfilesFilter styles="mt-2" />  </PaginationFunction>
 
 

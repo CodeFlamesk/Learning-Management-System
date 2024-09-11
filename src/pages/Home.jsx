@@ -11,12 +11,13 @@ import Footer from '@components/Footer/Footer';
 import Header from '@components/Header/Header';
 import CoursesNumber from '@components/CoursesNumber/CoursesNumber';
 
+
 const Home = () => {
     return (
         <>
 
 
-            <Container ><MainSlider /></Container>
+            <Container styles="pb-6"><MainSlider /></Container>
             <div className="max-w-full mx-auto px-5 sm:px-8 bg-sl-main"><CoursesNumber /></div>
 
             <Container >

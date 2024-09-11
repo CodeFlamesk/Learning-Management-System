@@ -1,80 +1,15 @@
-/* 
 
-import ArrowPagination from "./icon/ArrowPagination"
-  import React, { useState, useEffect } from 'react';
-  import axios from 'axios';
-import Countries from "./CoursesPagination";
-import Pagination from "./Pagination";
-
-const PagePagination = () => {
-    const [countries, setCountries]= useState([])
-    const[loading, setLoading] =  useState(false)
-     const [currentPage, setCurrentPage] = useState(1)
-     const [countriesPerPage] = useState(40)
-useEffect(()=> {
-    const getCountries = async () => {
-        setLoading(true)
-        const res = await axios.get('https://restcountries.com/v3.1/all')
-   
-
-        setCountries(res.countries)
-setLoading(false)
-    }
-    getCountries()
-},[])
-
-const lastCountryIndex = currentPage * countriesPerPage
-const firstCountryIndex = lastCountryIndex - countriesPerPage
-const currentCountry = countries.slice(firstCountryIndex, lastCountryIndex)
-
-const paginate = pageNumber => setCurrentPage(pageNumber)
-const nextPage = () => setCurrentPage(prev => prev+1)
-const prevPage = () => setCurrentPage(prev => prev-1)
-    return(
-
-        <div className="mt-5">
-<h1 >Card Test</h1>
-<Countries countries={currentCountry} loading={loading}/>
-
-
-        <div className="flex justify-center pt-6 pb-60">
-        <button className="pagination-courses text-gray-900 rounded-l-4r hover:text-blue-500 group" onClick={prevPage}>
-            <ArrowPagination className="group-hover:scale-125 transition-all duration-300" />
-        </button>
-<Pagination 
- countriesPerPage={countriesPerPage}
- totalCountries={countries.length}
- paginate={paginate}
-/>
-<button className="pagination-courses text-gray-900 rounded-r-4r hover:text-blue-500 group" onClick={nextPage}>
-            <ArrowPagination className="transform rotate-180 group-hover:scale-125 transition-all duration-300" />
-        </button>
-    </div>
-        <div className="flex justify-center pt-6 pb-60">
-        <button className="pagination-courses text-gray-900 rounded-l-4r hover:text-blue-500 group">
-            <ArrowPagination className="group-hover:scale-125 transition-all duration-300" />
-        </button>
-        <button className="pagination-courses text-gray-900 hover:text-blue-500 group"><p className="group-hover:scale-125">2</p></button>
-        <button className="pagination-courses text-gray-900 hover:text-blue-500 group"><p className="group-hover:scale-125">3</p></button>
-        <button className="pagination-courses text-gray-900 hover:text-blue-500 group"><p className="group-hover:scale-125">4</p></button>
-        <button className="pagination-courses text-gray-900 rounded-r-4r hover:text-blue-500 group">
-            <ArrowPagination className="transform rotate-180 group-hover:scale-125 transition-all duration-300" />
-        </button>
-    </div>
-    </div>
-    )
-}
-export default PagePagination */
-
-
-
-import ArrowPagination from "./icon/ArrowPagination";
 import React, { useState } from 'react';
-import CoursesPagination from "./CoursesPagination";
-import Pagination from "./Pagination";
 import CoursesImg from "./img/CoursesImg.svg";
 import Star from '@/components/Courses/icon/Star';
-const dataCard = [
+import PaginationFunction from "@components/Pagination/PaginationaFunction";
+
+import Subtitle from "@components/ui/Subtitle";
+import Rating from "@components/Courses/Rating";
+import SubheadingM from "@components/ui/SubheadingM";
+import { Link, useParams } from "react-router-dom";
+
+const data = [
     {
         coursesImg: CoursesImg,
         title: "1Beginner’ss Guide to Design",
@@ -696,50 +631,55 @@ const dataCard = [
         info: "22 Total Hours. 155 Lectures. Beginner",
         price: "$149.9"
     }
-    // ...додайте інші елементи dataCard
 ];
 
-const PagePagination = () => {
-    const [currentPage, setCurrentPage] = useState(1);
-    const [itemsPerPage] = useState(9);
-
-    const lastItemIndex = currentPage * itemsPerPage;
-    const firstItemIndex = lastItemIndex - itemsPerPage;
-    const currentItems = dataCard.slice(firstItemIndex, lastItemIndex);
-
-    const paginate = pageNumber => setCurrentPage(pageNumber);
-    const nextPage = () => setCurrentPage(prev => prev + 1);
-    const prevPage = () => setCurrentPage(prev => prev - 1);
-
+const Courses = () => {
     return (
-        <div className="mt-5 ">
-            <h1>Тестова карта</h1>
-            <CoursesPagination data={currentItems} currentPage={currentPage} />
+        <div className="flex flex-col">
+            <PaginationFunction
+                itemsPerPage={9}
+                data={data}
+                title='Courses'
+                showValue1='9'
+                showValue2='18'
+                showValue3='27'
+                stylesRender="grid grid-cols-1 items-center xs:grid-cols-2 sm:gap-x-5 mx-auto sm:mx-0 sm:grid-cols-3 gap-4 sm:gap-9 sm:place-items-center"
+                renderItem={(item, index) => (
+                    <Link to={`/categories/${index + 1}/details/description`}>
+                        <CoursesItem
+                            key={item.title + index}
+                            {...item}
+                        />
+                    </Link>
 
-            <div className="flex justify-center pt-6  ">
-                <button className="pagination-courses text-gray-900 rounded-l-4r hover:text-blue-500 group" onClick={prevPage}>
-                    <ArrowPagination className="group-hover:scale-125 transition-all duration-300" />
-                </button>
-                <Pagination
-                    itemsPerPage={itemsPerPage}
-                    totalItems={dataCard.length}
-                    paginate={paginate}
-                />
-                <button className="pagination-courses text-gray-900 rounded-r-4r hover:text-blue-500 group" onClick={nextPage}>
-                    <ArrowPagination className="transform rotate-180 group-hover:scale-125 transition-all duration-300" />
-                </button>
+                )}
+            />
+        </div>
+    );
+};
+export default Courses;
+
+const CoursesItem = ({ coursesImg, title, author, rating, info, price }) => {
+    return (
+        <div className='flex flex-col  bg-white p-3  border-grey-border rounded-2xl border border-solid xs:gap-2 sm:max-w-61 md:max-w-full'>
+            <div className='rounded-lg overflow-hidden object-cover max-h-full'>
+                <img className='max-w-full object-cover h-full' src={coursesImg} alt="courses-img" />
+            </div>
+            <div className='flex flex-col mt-2  xs:mt-0'>
+                <Subtitle title={title} />
+                <p className='text-grey-700 text-sm xs:text-xs leading-5 xs:leading-4 sm:text-sm xs:py-0 py-1.5 sm:py-1.5 font-normal sm:leading-5'>{author}</p>
+                <div className='flex justify-between flex-wrap gap-1 items-center'>
+                    <Rating iconComponent={<Star />} />
+                    <p className='text-grey-700 text-xs font-semibold leading-4'>{rating}</p>
+                </div>
+                <p className='text-grey-700 text-sm leading-5 xs:leading-4 xs:text-xs sm:text-sm sm:py-2 font-normal sm:leading-5 tracking-normal'>{info}</p>
+                <div className='mt-auto'>
+                    <SubheadingM title={price} />
+                </div>
             </div>
         </div>
     );
 };
-
-export default PagePagination;
-
-
-
-
-
-
 
 
 
