@@ -8,7 +8,16 @@ import Subtitle from "@components/ui/Subtitle";
 import Rating from "@components/Courses/Rating";
 import SubheadingM from "@components/ui/SubheadingM";
 import { Link, useParams } from "react-router-dom";
-
+import CoursesImg1 from "./img/courseImg1.webp"
+import CoursesImg2 from "./img/courseImg2.webp"
+import CoursesImg3 from "./img/courseImg3.webp"
+import CoursesImg4 from "./img/courseImg4.webp"
+import CoursesImg5 from "./img/courseImg5.webp"
+import CoursesImg6 from "./img/courseImg6.webp"
+import CoursesImg7 from "./img/courseImg7.webp"
+import CoursesImg8 from "./img/courseImg8.webp"
+import CoursesImg9 from "./img/courseImg9.webp"
+import CoursesImg10 from "./img/courseImg10.webp"
 const data = [
     {
         coursesImg: CoursesImg,
@@ -20,7 +29,7 @@ const data = [
         price: "$149.9"
     },
     {
-        coursesImg: CoursesImg,
+        coursesImg: CoursesImg10,
         title: "2Beginner’s Guide to Design",
         author: "By Ronald Richards",
         iconComponent: <Star />,
@@ -29,7 +38,7 @@ const data = [
         price: "$149.9"
     },
     {
-        coursesImg: CoursesImg,
+        coursesImg: CoursesImg2,
         title: "3Beginner’s Guide to Design",
         author: "By Ronald Richards",
         iconComponent: <Star />,
@@ -38,7 +47,7 @@ const data = [
         price: "$149.9"
     },
     {
-        coursesImg: CoursesImg,
+        coursesImg: CoursesImg3,
         title: "4Beginner’s Guide to Design",
         author: "By Ronald Richards",
         iconComponent: <Star />,
@@ -47,7 +56,7 @@ const data = [
         price: "$149.9"
     },
     {
-        coursesImg: CoursesImg,
+        coursesImg: CoursesImg4,
         title: "5Beginner’s Guide to Design",
         author: "By Ronald Richards",
         iconComponent: <Star />,
@@ -56,7 +65,7 @@ const data = [
         price: "$149.9"
     },
     {
-        coursesImg: CoursesImg,
+        coursesImg: CoursesImg5,
         title: "6Beginner’s Guide to Design",
         author: "By Ronald Richards",
         iconComponent: <Star />,
@@ -65,7 +74,7 @@ const data = [
         price: "$149.9"
     },
     {
-        coursesImg: CoursesImg,
+        coursesImg: CoursesImg6,
         title: "7Beginner’s Guide to Design",
         author: "By Ronald Richards",
         iconComponent: <Star />,
@@ -74,7 +83,7 @@ const data = [
         price: "$149.9"
     },
     {
-        coursesImg: CoursesImg,
+        coursesImg: CoursesImg7,
         title: "8Beginner’s Guide to Design",
         author: "By Ronald Richards",
         iconComponent: <Star />,
@@ -83,7 +92,7 @@ const data = [
         price: "$149.9"
     },
     {
-        coursesImg: CoursesImg,
+        coursesImg: CoursesImg8,
         title: "9Beginner’s Guide to Design",
         author: "By Ronald Richards",
         iconComponent: <Star />,
@@ -92,7 +101,7 @@ const data = [
         price: "$149.9"
     },
     {
-        coursesImg: CoursesImg,
+        coursesImg: CoursesImg1,
         title: "10Beginner’s Guide to Design",
         author: "By Ronald Richards",
         iconComponent: <Star />,
@@ -101,7 +110,7 @@ const data = [
         price: "$149.9"
     },
     {
-        coursesImg: CoursesImg,
+        coursesImg: CoursesImg5,
         title: "11Beginner’s Guide to Design",
         author: "By Ronald Richards",
         iconComponent: <Star />,
@@ -110,7 +119,7 @@ const data = [
         price: "$149.9"
     },
     {
-        coursesImg: CoursesImg,
+        coursesImg: CoursesImg3,
         title: "12Beginner’s Guide to Design",
         author: "By Ronald Richards",
         iconComponent: <Star />,
@@ -119,7 +128,7 @@ const data = [
         price: "$149.9"
     },
     {
-        coursesImg: CoursesImg,
+        coursesImg: CoursesImg7,
         title: "13Beginner’s Guide to Design",
         author: "By Ronald Richards",
         iconComponent: <Star />,
@@ -128,7 +137,7 @@ const data = [
         price: "$149.9"
     },
     {
-        coursesImg: CoursesImg,
+        coursesImg: CoursesImg2,
         title: "14Beginner’s Guide to Design",
         author: "By Ronald Richards",
         iconComponent: <Star />,
@@ -137,7 +146,7 @@ const data = [
         price: "$149.9"
     },
     {
-        coursesImg: CoursesImg,
+        coursesImg: CoursesImg10,
         title: "15Beginner’s Guide to Design",
         author: "By Ronald Richards",
         iconComponent: <Star />,
@@ -146,7 +155,7 @@ const data = [
         price: "$149.9"
     },
     {
-        coursesImg: CoursesImg,
+        coursesImg: CoursesImg1,
         title: "16Beginner’s Guide to Design",
         author: "By Ronald Richards",
         iconComponent: <Star />,
@@ -164,7 +173,187 @@ const data = [
         price: "$149.9"
     },
     {
+        coursesImg: CoursesImg9,
+        title: "Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg8,
+        title: "Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg5,
+        title: "Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg3,
+        title: "Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg2,
+        title: "Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg1,
+        title: "Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg8,
+        title: "Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg9,
+        title: "Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg10,
+        title: "Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg4,
+        title: "Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg3,
+        title: "Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg9,
+        title: "Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg8,
+        title: "Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg7,
+        title: "Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg6,
+        title: "Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg5,
+        title: "Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg4,
+        title: "Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg3,
+        title: "Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
         coursesImg: CoursesImg,
+        title: "Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg2,
+        title: "Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg1,
         title: "Beginner’s Guide to Design",
         author: "By Ronald Richards",
         iconComponent: <Star />,
@@ -183,6 +372,312 @@ const data = [
     },
     {
         coursesImg: CoursesImg,
+        title: "1Beginner’ss Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg10,
+        title: "2Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg2,
+        title: "3Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg3,
+        title: "4Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg4,
+        title: "5Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg5,
+        title: "6Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg6,
+        title: "7Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg7,
+        title: "8Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg8,
+        title: "9Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg1,
+        title: "10Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg5,
+        title: "11Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg3,
+        title: "12Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg7,
+        title: "13Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg2,
+        title: "14Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg10,
+        title: "15Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg1,
+        title: "16Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg,
+        title: "Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg9,
+        title: "Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg8,
+        title: "Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg5,
+        title: "Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg3,
+        title: "Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg2,
+        title: "Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg1,
+        title: "Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg8,
+        title: "Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg9,
+        title: "Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg10,
+        title: "Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg4,
+        title: "Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg3,
+        title: "Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg9,
+        title: "Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg8,
+        title: "Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg7,
+        title: "Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg6,
+        title: "Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg5,
+        title: "Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg4,
+        title: "Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        coursesImg: CoursesImg3,
         title: "Beginner’s Guide to Design",
         author: "By Ronald Richards",
         iconComponent: <Star />,
@@ -200,7 +695,7 @@ const data = [
         price: "$149.9"
     },
     {
-        coursesImg: CoursesImg,
+        coursesImg: CoursesImg2,
         title: "Beginner’s Guide to Design",
         author: "By Ronald Richards",
         iconComponent: <Star />,
@@ -209,7 +704,7 @@ const data = [
         price: "$149.9"
     },
     {
-        coursesImg: CoursesImg,
+        coursesImg: CoursesImg1,
         title: "Beginner’s Guide to Design",
         author: "By Ronald Richards",
         iconComponent: <Star />,
@@ -217,420 +712,6 @@ const data = [
         info: "22 Total Hours. 155 Lectures. Beginner",
         price: "$149.9"
     },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Begиииnner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "eginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    }
 ];
 
 const Courses = () => {
@@ -662,8 +743,8 @@ export default Courses;
 const CoursesItem = ({ coursesImg, title, author, rating, info, price }) => {
     return (
         <div className='flex flex-col  bg-white p-3  border-grey-border rounded-2xl border border-solid xs:gap-2 sm:max-w-61 md:max-w-full'>
-            <div className='rounded-lg overflow-hidden object-cover max-h-full'>
-                <img className='max-w-full object-cover h-full' src={coursesImg} alt="courses-img" />
+            <div className='rounded-lg h-[139px] overflow-hidden object-cover max-h-full'>
+                <img className='max-w-full w-full object-cover h-full' src={coursesImg} alt="courses-img" />
             </div>
             <div className='flex flex-col mt-2  xs:mt-0'>
                 <Subtitle title={title} />

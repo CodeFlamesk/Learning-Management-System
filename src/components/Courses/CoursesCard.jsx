@@ -3,13 +3,15 @@ import Star from './icon/Star';
 import CoursesImg from "./img/CoursesImg.png";
 import Subtitle from '@/components/ui/Subtitle';
 import Rating from './Rating';
-
+import CoursesImg10 from "@components/PageCategories/img/courseImg10.webp"
+import CoursesImg2 from "@components/PageCategories/img/courseImg2.webp"
+import CoursesImg3 from "@components/PageCategories/img/courseImg3.webp"
 import SubheadingM from '@/components/ui/SubheadingM';
 
 const data = [
     {
         coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
+        title: "1Beginner’ss Guide to Design",
         author: "By Ronald Richards",
         iconComponent: <Star />,
         rating: "(1200 Ratings)",
@@ -17,8 +19,8 @@ const data = [
         price: "$149.9"
     },
     {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
+        coursesImg: CoursesImg10,
+        title: "2Beginner’s Guide to Design",
         author: "By Ronald Richards",
         iconComponent: <Star />,
         rating: "(1200 Ratings)",
@@ -26,8 +28,8 @@ const data = [
         price: "$149.9"
     },
     {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
+        coursesImg: CoursesImg2,
+        title: "3Beginner’s Guide to Design",
         author: "By Ronald Richards",
         iconComponent: <Star />,
         rating: "(1200 Ratings)",
@@ -35,14 +37,14 @@ const data = [
         price: "$149.9"
     },
     {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
+        coursesImg: CoursesImg3,
+        title: "4Beginner’s Guide to Design",
         author: "By Ronald Richards",
         iconComponent: <Star />,
         rating: "(1200 Ratings)",
         info: "22 Total Hours. 155 Lectures. Beginner",
         price: "$149.9"
-    }
+    },
 ]
 const CoursesCard = ({ styles }) => {
     return (

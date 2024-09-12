@@ -62,35 +62,68 @@ const Header = () => {
                 <div className={style.input}>
                     <nav className={nav ? [style.menu, style.active].join(' ') : style.menu}>
                         <div className={nav ? [style.category, style.active].join(' ') : style.category}>
-                            <ul className='flex flex-wrap'>
+                            <ul className={`flex flex-wrap ${nav && 'flex-col relative'}`}>
                                 <li>
-                                    <Link to="/categories" className='text-grey-700 text-sm leading-5 font-medium hover:text-blue transition-all duration-300 tb:pt-0'>
+                                    <Link to="/categories" className={` leading-5 font-medium hover:text-blue transition-all duration-300 tb:pt-0 ${nav ? 'text-white text-2xl' : 'text-grey-700 text-sm'}`}>
                                         Category
                                     </Link>
                                 </li>
+                                {isLoggedIn && nav && (<div className=' left-[-35%] absolute text-center items-center justify-center top-[80px]  flex flex-col gap-4 border-t border-t-grey-text-light p-6'>
+                                    <Link to="/myprofile/profile" className="text-center underline-menu group textMyProfile justify-center">
+                                        Profile
+                                        <span className="underline-menu-span"></span>
+                                    </Link>
+                                    <Link to="/categories/:id/details/shoppingcart" className="justify-center underline-menu group textMyProfile">
+                                        Order&nbsp;Page
+                                        <span className="underline-menu-span"></span>
+                                    </Link>
+                                    <Link to="/myprofile/my-courses" className="flex justify-center underline-menu group textMyProfile">
+                                        My&nbsp;Courses
+                                        <span className="underline-menu-span"></span>
+                                    </Link>
+                                    <a href="https://example.com/help" target="_blank" className="underline-menu group textMyProfile">
+                                        Help
+                                        <span className="underline-menu-span"></span>
+                                    </a>
+                                    <button className="underline-menu group textMyProfile text-2xl " onClick={() => { setOpenMyProfile(); handleAuth(); }}>
+                                        <p className=' text-2xl'> Logout</p>
+                                        <span className="underline-menu-span"></span>
+                                    </button>
+                                </div>)}
                             </ul>
                         </div>
                     </nav>
 
                     <label htmlFor="searchInput" className="hidden ft:flex border border-gray-700 rounded-lg sm:max-w-full px-2.5 tb:ml-8 tb:mr-10 py-2 gap-3 basis-[100%] tb:basis-[57%]">
                         <button type="button"><img src={find} alt="Search" /></button>
-                        <input id="searchInput" type="text" className='text-grey-700 text-sm leading-5 font-medium w-full focus:outline-none' placeholder="Search courses" />
+                        <input id="searchInput" type="search" className=' text-grey-700 text-sm leading-5 font-medium w-full focus:outline-none input-shadow ' placeholder="Search courses" />
                     </label>
                     <nav className={nav ? [style.menu_teach, style.active].join(' ') : [style.menu_teach]}>
-                        <ul className='flex flex-wrap'>
+                        <ul className={`flex flex-wrap `}
+                        >
                             <li>
-                                <Link to="/myprofile/profile" className='text-grey-700 text-sm leading-5 font-medium hover:text-blue transition-all duration-300 tb:pt-0'>
+                                {isLoggedIn ? (<Link to="/myprofile/profile" className={` leading-5 font-medium hover:text-blue transition-all duration-300 tb:pt-0  ${nav ? 'text-white text-2xl' : 'text-grey-700 text-sm'}`}>
                                     Teach on Byway
-                                </Link>
+                                </Link>) : (<Link to="/login" className={` leading-5 font-medium hover:text-blue transition-all duration-300 tb:pt-0  ${nav ? 'text-white text-2xl' : 'text-grey-700 text-sm'}`}>
+                                    Teach on Byway
+                                </Link>)}
+
                             </li>
+
                         </ul>
                     </nav>
                 </div>
 
                 <div className={nav ? [style.button_sign, style.active].join(' ') : [style.button_sign]}>
-                    <Link to={`/categories/${id}/details/shoppingcart`} className='ml-auto'><img src={basket} alt="Basket" /></Link>
+
+
+                    {isLoggedIn ? (<Link to={`/categories/${id}/details/shoppingcart`} className={`ml-auto ${nav && [style.basket]}`} ><img src={basket} alt="Basket" /></Link>) : (<Link to="/login" className={`ml-auto ${nav && [style.basket]}`} ><img src={basket} alt="Basket" /></Link>)}
+
+
+
+
                     {isLoggedIn ? (
-                        <div className='relative flex ' ref={menusRef}  >
+                        <div className={style.mymenu} ref={menusRef}  >
                             <button
                                 onClick={() => setOpenMyProfile(prevState => !prevState)}
                                 className='flex hover:bg-sl-blue duration-300 w-10 h-10 rounded-full bg-grey-700 items-center justify-center text-base font-medium text-white'>
@@ -100,8 +133,7 @@ const Header = () => {
                             <div
 
                                 className={`absolute opacity-0 bg-white border rounded-2xl top-[60px] border-blue flex flex-col right-0 min-w-80 max-w-max z-[300] transition-all duration-300
-                              ${openMyProfile && 'opacity-100 duration-300'} 
-                              `}
+                              ${openMyProfile && 'opacity-100 duration-300'}`}
                             >
                                 <div className='flex items-center gap-4 py-5 px-6'>
                                     <div className='flex duration-300 w-60w h-60w rounded-full bg-grey-700 items-center justify-center text-base font-medium text-white'> {nameLeter}</div>
@@ -151,7 +183,7 @@ const Header = () => {
                 </div>
 
                 <div onClick={() => setNav(!nav)} className={style.mobile_btn}>
-                    {nav ? <AiOutlineClose size={25} /> : <AiOutlineMenu size={25} />}
+                    {nav ? <AiOutlineClose size={25} color='grey' /> : <AiOutlineMenu size={25} />}
                 </div>
             </div>
         </header >
