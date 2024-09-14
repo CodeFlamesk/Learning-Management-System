@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import CoursesImg from "./img/CoursesImg.svg";
 import Star from '@/components/Courses/icon/Star';
 import PaginationFunction from "@components/Pagination/PaginationaFunction";
-
 import Subtitle from "@components/ui/Subtitle";
 import Rating from "@components/Courses/Rating";
 import SubheadingM from "@components/ui/SubheadingM";

@@ -54,5 +54,4 @@ const ImageUploader = ({ uploading }) => {
         </>
     );
 };
-
 export default ImageUploader;

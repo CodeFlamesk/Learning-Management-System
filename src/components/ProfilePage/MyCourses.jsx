@@ -1,17 +1,78 @@
 import Star from "@components/Courses/icon/Star";
 import PaginationFunction from "@components/Pagination/PaginationaFunction";
-import CoursesImg from "../Courses/img/CoursesImg.png";
+
 
 import Rating from "@components/Courses/Rating";
 
 import ProfilesFilter from "./ProfilesFilter";
 import { Link } from "react-router-dom";
-
+import CoursesImg1 from "@components/PageCategories/img/courseImg1.webp"
+import CoursesImg2 from "@components/PageCategories/img/courseImg2.webp"
+import CoursesImg3 from "@components/PageCategories/img/courseImg3.webp"
+import CoursesImg4 from "@components/PageCategories/img/courseImg4.webp"
+import CoursesImg5 from "@components/PageCategories/img/courseImg5.webp"
+import CoursesImg6 from "@components/PageCategories/img/courseImg6.webp"
+import CoursesImg7 from "@components/PageCategories/img/courseImg7.webp"
+import CoursesImg8 from "@components/PageCategories/img/courseImg8.webp"
 
 const data = [
     {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
+        coursesImg: CoursesImg6,
+        title: "UI/UX Design",
+        author: "By Leo Mikso",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+
+
+    },
+    {
+        coursesImg: CoursesImg2,
+        title: "Fundamentals of Modern Architecture",
+        author: "By Tirtle Kun",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+
+
+    },
+    {
+        coursesImg: CoursesImg3,
+        title: "Marketing Strategy",
+        author: "By Stalke Mark.",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+
+
+    },
+    {
+        coursesImg: CoursesImg4,
+        title: "Cybersecurity Basics",
+        author: "By Cyber Pes",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+
+
+    },
+    {
+        coursesImg: CoursesImg5,
+        title: "Architectural Photography",
+        author: "By Photo Pes",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+
+
+    },
+    {
+        coursesImg: CoursesImg6,
+        title: "UI/UX Design",
+        author: "By Leo Mikso",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+
+
+    },
+    {
+        coursesImg: CoursesImg7,
+        title: "Management with SQL",
         author: "By Ronald Richards",
         iconComponent: <Star />,
         rating: "(1200 Ratings)",
@@ -19,145 +80,95 @@ const data = [
 
     },
     {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
+        coursesImg: CoursesImg6,
+        title: "UI/UX Design",
+        author: "By Leo Mikso",
         iconComponent: <Star />,
         rating: "(1200 Ratings)",
 
 
     },
     {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
+        coursesImg: CoursesImg2,
+        title: "Fundamentals of Modern Architecture",
+        author: "By Tirtle Kun",
         iconComponent: <Star />,
         rating: "(1200 Ratings)",
 
 
     },
     {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
+        coursesImg: CoursesImg3,
+        title: "Marketing Strategy Online With Mentor",
+        author: "By Stalke Mark.",
         iconComponent: <Star />,
         rating: "(1200 Ratings)",
 
 
     },
     {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
+        coursesImg: CoursesImg6,
+        title: "UI/UX Design",
+        author: "By Leo Mikso",
         iconComponent: <Star />,
         rating: "(1200 Ratings)",
 
 
     },
     {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
+        coursesImg: CoursesImg8,
+        title: "Full-Stack Development",
+        author: "By ProgPes",
         iconComponent: <Star />,
         rating: "(1200 Ratings)",
 
 
     },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
 
 
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
 
-
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-
-
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-
-
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-
-
-    }
 ]
 const MyCourses = () => {
     return (
         <div className="flex flex-col">
-
-            <PaginationFunction itemsPerPage={3}
+            <PaginationFunction
+                itemsPerPage={3}
                 data={data}
                 title='Courses'
                 showValue1='3'
                 showValue2='9'
                 showValue3='12'
-                stylesRender="grid grid-cols-1 items-center  xs:grid-cols-2 sm:gap-x-5 mx-auto sm:mx-0 sm:grid-cols-3   gap-4 sm:gap-9 sm:place-items-center"
-
+                stylesRender="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6 mt-3 "
                 renderItem={(item, index) => (
-                    <Link to={`/bought-course/:index/description`} >
-                        <MyCoursesItem
-                            key={item.title + index}
-                            {...item}
-                        />
+                    <Link key={index} to={`/bought-course/${index}/description`} >
+                        <MyCoursesItem {...item} />
                     </Link>
-
-                )} >  <ProfilesFilter styles="mt-2" />  </PaginationFunction>
-
-
+                )}
+            >
+                <ProfilesFilter styles="mt-2" />
+            </PaginationFunction>
         </div>
     );
 };
+
 export default MyCourses;
 const MyCoursesItem = ({ coursesImg, title, author, rating }) => {
-
     return (
-        <div className=' flex flex-col ml-3 xs:ml-0 mr-3 mt-4 xs:mr-0  bg-white  p-3 border-grey-border   rounded-2xl border border-solid xs:gap-2 sm:max-w-61 md:max-w-full'>
-            <div className='w-full rounded-lg overflow-hidden object-cover max-h-full'>
-                <img className='  object-cover h-full' src={coursesImg} alt="courses-img" />
+        <div className='flex flex-col bg-white p-3 border-grey-border rounded-2xl border border-solid h-full max-w-sm mx-auto'>
+            <div className='rounded-lg h-36 overflow-hidden'>
+                <img className='object-cover w-full h-full' src={coursesImg} alt="courses-img" />
             </div>
-            <div className='flex flex-col mt-2  xs:mt-0'>
-                <p className="text-grey-900 text-base sm:text-lg font-semibold" >{title}</p>
-
-                <p className='text-grey-700 text-sm xs:text-xs leading-5 xs:leading-4 sm:text-sm pb-2 pt-1.5   font-normal sm:leading-5'>{author}</p>
-                <span className="flex w-full bg-primary-100 h-[3px] rounded-60r relative">
-                    <span className="flex w-[80%] bg-blue h-[3px]  rounded-60r"></span>
+            <div className='flex flex-col mt-2 flex-1'>
+                <p className="text-grey-900 text-base font-semibold">{title}</p>
+                <p className='text-grey-700 text-sm leading-5 font-normal mb-1'>{author}</p>
+                <span className="flex w-full bg-primary-100 h-1 rounded-full relative mt-auto">
+                    <span className="flex w-[80%] bg-blue h-1 rounded-full"></span>
                 </span>
-                <div className='flex justify-between flex-wrap gap-1 items-center pt-1.5'>
+                <div className='flex justify-between items-center  pt-1.5'>
                     <Rating iconComponent={<Star />} />
-                    <p className='text-grey-700 text-xs font-semibold leading-4 '>{rating}</p>
+                    <p className='text-grey-700 text-xs font-semibold'>{rating}</p>
                 </div>
-
-
             </div>
         </div>
-
     );
 };

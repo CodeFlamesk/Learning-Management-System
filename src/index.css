@@ -289,6 +289,10 @@
   transition: 0.3s;
 }
 
+
+
+
+
 .input-shadow {
   box-shadow: inset 0px 0px 0px 30px #FFFFFF;
 }
@@ -319,75 +323,7 @@
 }
 
 
-/* 1 .swiper-pagination {
-  bottom: 10px;
-  left: 0;
-  right: 0;
-  text-align: center;
-  display: flex;
-  gap: 30px;
-  z-index: 10;
-  justify-content: center;
-}
 
-.swiper-pagination-bullet {
-  background: #3490dc;
-  width: 12px;
-  height: 12px;
-  opacity: 1;
-  border-radius: 50%;
-}
-
-.swiper-pagination-bullet-active {
-  background: #1d4ed8;
-
-} */
-/* 2 .swiper-pagination {
-  bottom: 10px;
-  left: 0;
-  right: 0;
-  text-align: center;
-  display: flex;
-  gap: 30px;
-  z-index: 10;
-  justify-content: center;
-}
-
-.swiper-pagination-bullet {
-  background: #73b5ec;
-  width: 12px;
-  height: 12px;
-  opacity: 1;
-  border-radius: 50%;
-}
-
-.swiper-pagination-bullet-active {
-  background: #1d4ed8;
-
-} */
-/*  3 .swiper-pagination {
-  bottom: 10px;
-  left: 0;
-  right: 0;
-  text-align: center;
-  display: flex;
-  gap: 30px;
-  z-index: 10;
-  justify-content: center;
-}
-
-.swiper-pagination-bullet {
-  background: #19d1ed;
-  width: 12px;
-  height: 12px;
-  opacity: 1;
-  border-radius: 50%;
-}
-
-.swiper-pagination-bullet-active {
-  background: #792fd9;
-
-} */
 .swiper-pagination {
   left: 0;
   right: 0;

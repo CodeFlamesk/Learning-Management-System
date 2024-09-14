@@ -9,88 +9,41 @@ import CloseIcon from "./icon/CloseIcon";
 
 const data = [
     {
-        title: "1Beginner’s Guide to Design",
+        title: "Design Fundamentals: Zero to Hero",
         iconComponent: <Star />,
-        review: "I was initially apprehensive, having no prior design experience. But the instructor, John Doe, did an amazing job of breaking down complex concepts into easily digestible modules. The video lectures were engaging, and the real-world examples really helped solidify my understanding"
+        review: "Initially, I was hesitant due to my lack of design experience. However, the instructor, John Doe, excelled at making complex concepts easy to understand. The video lectures were highly engaging, and the practical examples made the material stick. This course truly transformed my approach to design!"
     },
     {
-        title: "2Beginner’s Guide to Design",
+        title: "Essential Design Principles",
         iconComponent: <Star />,
-        review: "I was initially apprehensive, having no prior design experience. But the instructor, John Doe, did an amazing job of breaking down complex concepts into easily digestible modules. The video lectures were engaging, and the real-world examples really helped solidify my understanding"
+        review: "I started with little knowledge of design, but John Doe’s clear explanations and well-structured modules helped me grasp the basics quickly. The course is filled with interactive lectures and relevant examples that helped me build a solid foundation in design."
     },
     {
-        title: "3Beginner’s Guide to Design",
+        title: "Introduction to Graphic Design",
         iconComponent: <Star />,
-        review: "I was initially apprehensive, having no prior design experience. But the instructor, John Doe, did an amazing job of breaking down complex concepts into easily digestible modules. The video lectures were engaging, and the real-world examples really helped solidify my understanding"
+        review: "As someone with no prior design experience, I found this course to be incredibly useful. John Doe's teaching style made the complex material accessible and engaging. The real-world scenarios provided in the course helped me apply what I learned effectively."
     },
     {
-        title: "4Beginner’s Guide to Design",
+        title: "Blueprint for Graphic Design Success",
         iconComponent: <Star />,
-        review: "I was initially apprehensive, having no prior design experience. But the instructor, John Doe, did an amazing job of breaking down complex concepts into easily digestible modules. The video lectures were engaging, and the real-world examples really helped solidify my understanding"
+        review: "This course exceeded my expectations. John Doe’s ability to break down design principles into manageable sections made learning enjoyable. The combination of video lectures and practical exercises helped me gain confidence in my design skills."
     },
     {
-        title: "5Beginner’s Guide to Design",
+        title: "Foundations of Design",
         iconComponent: <Star />,
-        review: "I was initially apprehensive, having no prior design experience. But the instructor, John Doe, did an amazing job of breaking down complex concepts into easily digestible modules. The video lectures were engaging, and the real-world examples really helped solidify my understanding"
+        review: "I was new to design, and this course was the perfect starting point. John Doe’s teaching was clear and supportive, making complex topics easy to understand. The practical examples and interactive content were instrumental in my learning process."
     },
     {
-        title: "6Beginner’s Guide to Design",
+        title: "Mastering Design Basics",
         iconComponent: <Star />,
-        review: "I was initially apprehensive, having no prior design experience. But the instructor, John Doe, did an amazing job of breaking down complex concepts into easily digestible modules. The video lectures were engaging, and the real-world examples really helped solidify my understanding"
+        review: "The course provided a thorough introduction to design. John Doe’s method of teaching made even the most complicated concepts approachable. The engaging lectures and real-life examples helped reinforce my understanding and skills."
     },
     {
-        title: "7Beginner’s Guide to Design",
+        title: "Graphic Design 101",
         iconComponent: <Star />,
-        review: "I was initially apprehensive, having no prior design experience. But the instructor, John Doe, did an amazing job of breaking down complex concepts into easily digestible modules. The video lectures were engaging, and the real-world examples really helped solidify my understanding"
-    },
-    {
-        title: "8Beginner’s Guide to Design",
-        iconComponent: <Star />,
-        review: "I was initially apprehensive, having no prior design experience. But the instructor, John Doe, did an amazing job of breaking down complex concepts into easily digestible modules. The video lectures were engaging, and the real-world examples really helped solidify my understanding"
-    },
-    {
-        title: "9Beginner’s Guide to Design",
-        iconComponent: <Star />,
-        review: "I was initially apprehensive, having no prior design experience. But the instructor, John Doe, did an amazing job of breaking down complex concepts into easily digestible modules. The video lectures were engaging, and the real-world examples really helped solidify my understanding"
-    },
-    {
-        title: "3Beginner’s Guide to Design",
-        iconComponent: <Star />,
-        review: "I was initially apprehensive, having no prior design experience. But the instructor, John Doe, did an amazing job of breaking down complex concepts into easily digestible modules. The video lectures were engaging, and the real-world examples really helped solidify my understanding"
-    },
-    {
-        title: "23Beginner’s Guide to Design",
-        iconComponent: <Star />,
-        review: "I was initially apprehensive, having no prior design experience. But the instructor, John Doe, did an amazing job of breaking down complex concepts into easily digestible modules. The video lectures were engaging, and the real-world examples really helped solidify my understanding"
-    },
-    {
-        title: "22Beginner’s Guide to Design",
-        iconComponent: <Star />,
-        review: "I was initially apprehensive, having no prior design experience. But the instructor, John Doe, did an amazing job of breaking down complex concepts into easily digestible modules. The video lectures were engaging, and the real-world examples really helped solidify my understanding"
-    },
-    {
-        title: "4Beginner’s Guide to Design",
-        iconComponent: <Star />,
-        review: "I was initially apprehensive, having no prior design experience. But the instructor, John Doe, did an amazing job of breaking down complex concepts into easily digestible modules. The video lectures were engaging, and the real-world examples really helped solidify my understanding"
-    },
-    {
-        title: "5Beginner’s Guide to Design",
-        iconComponent: <Star />,
-        review: "I was initially apprehensive, having no prior design experience. But the instructor, John Doe, did an amazing job of breaking down complex concepts into easily digestible modules. The video lectures were engaging, and the real-world examples really helped solidify my understanding"
-    },
-    {
-        title: "6Beginner’s Guide to Design",
-        iconComponent: <Star />,
-        review: "I was initially apprehensive, having no prior design experience. But the instructor, John Doe, did an amazing job of breaking down complex concepts into easily digestible modules. The video lectures were engaging, and the real-world examples really helped solidify my understanding"
-    },
-
-
-    {
-        title: "Beginner’s Guide to Design",
-        iconComponent: <Star />,
-        review: "I was initially apprehensive, having no prior design experience. But the instructor, John Doe, did an amazing job of breaking down complex concepts into easily digestible modules. The video lectures were engaging, and the real-world examples really helped solidify my understanding"
-
+        review: "John Doe did a fantastic job of making design accessible to beginners. The course covered essential principles with engaging content and practical exercises. I felt well-prepared to start applying design concepts in real-world scenarios by the end."
     }
+
 ]
 
 
