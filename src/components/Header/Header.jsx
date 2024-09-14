@@ -13,7 +13,7 @@ const Header = () => {
     const { id } = useParams();
     const [nav, setNav] = useState(false);
     const menusRef = useRef(null);
-
+    const changeName = useSelector((state) => state.changeName);
     useEffect(() => {
 
         const handleClickOutside = (event) => {
@@ -44,14 +44,14 @@ const Header = () => {
     };
     const email = useSelector((state) => state.email);
     const smallName = email.split('@')[0];
-
+    const changeImg = useSelector((state) => state.changeImg);
     const capitalizeFirstLetter = (str) => {
         if (!str) return str;
         return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
     };
 
     const name = capitalizeFirstLetter(smallName);
-    const nameLeter = name.charAt(0);
+    const nameLetter = name.charAt(0);
     return (
         <header className='pt-3 gap-1 sm:gap-4 bg-white border-b border-grey-border pb-3'>
             <div className='z-50 flex items-center sm:justify-between px-5 sm:px-8 max-w-screen-ct mx-auto'>
@@ -127,18 +127,41 @@ const Header = () => {
                             <button
                                 onClick={() => setOpenMyProfile(prevState => !prevState)}
                                 className='flex hover:bg-sl-blue duration-300 w-10 h-10 rounded-full bg-grey-700 items-center justify-center text-base font-medium text-white'>
-                                {nameLeter}
+
+                                {
+                                    changeImg ? (
+                                        <img
+                                            src={changeImg}
+                                            alt="Profile Preview"
+                                            className="rounded-full w-full h-full object-cover"
+                                        />
+                                    ) : (
+                                        nameLetter
+                                    )
+                                }
+
+
                             </button>
 
-                            <div
-
-                                className={`absolute opacity-0 bg-white border rounded-2xl top-[60px] border-blue flex flex-col right-0 min-w-80 max-w-max z-[300] transition-all duration-300
-                              ${openMyProfile && 'opacity-100 duration-300'}`}
+                            <div className={`absolute opacity-0  bg-white border rounded-2xl top-[60px] border-blue flex flex-col right-0 min-w-80 max-w-max z-[-20] transition-all duration-300
+                              ${openMyProfile && 'opacity-100 duration-300  z-[900]'}`}
                             >
                                 <div className='flex items-center gap-4 py-5 px-6'>
-                                    <div className='flex duration-300 w-60w h-60w rounded-full bg-grey-700 items-center justify-center text-base font-medium text-white'> {nameLeter}</div>
+                                    <div className='flex duration-300 w-60w h-60w rounded-full bg-grey-700 items-center justify-center text-base font-medium text-white'>         {
+                                        changeImg ? (
+                                            <img
+                                                src={changeImg}
+                                                alt="Profile Preview"
+                                                className="rounded-full w-full h-full object-cover"
+                                            />
+                                        ) : (
+                                            nameLetter
+                                        )
+                                    }</div>
                                     <div className='flex flex-col gap-2'>
-                                        <p className='text-base font-medium text-text-dark'>{name}</p>
+                                        {changeName ? (<p className='text-base font-medium text-text-dark'> {changeName} </p>) : (<p className='text-base font-medium text-text-dark'>{name}</p>)}
+
+
                                         <p className='text-xs font-normal text-grey-800'>{email}</p>
                                     </div>
                                 </div>

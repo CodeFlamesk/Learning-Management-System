@@ -31,13 +31,13 @@ const AllCourses = () => {
 
             <MainTitle title="Design Courses" styles="pt-6" />
             <h3 className="pt-6 text-2xl  text-grey-900   font-semibold">All Development Courses</h3>
-            {/* кнопки */}
-            <div className="flex justify-between pt-6">
+
+            <div className="flex flex-col-reverse items-end gap-3 ft:flex-row ft:justify-between pt-6  ">
 
                 <button onClick={() => setShowFilter(prevState => !prevState)}><ButtonFilter text="Filter" iconComponent={<FilterIcon />} /></button>
-                <div className="flex gap-4 items-center">
-                    <p className="button-text">Sort By</p>
-                    <div>
+                <div className="flex gap-4 items-center justify-end ">
+                    <p className="button-text  ">Sort By:</p>
+                    <div className="flex ">
                         <SelectMenu />
                     </div>
                 </div>

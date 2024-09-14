@@ -7,7 +7,7 @@ const ProfilesFilter = ({ styles }) => {
         <div className={`flex flex-col md:flex-row md:items-center gap-4  ${styles} `}>
 
             <label htmlFor="searchInput" className=" flex  border border-gray-700 rounded-lg  p-2.5 gap-3  md:mr-auto  items-center">
-                <input id="searchInput" type="text" className='text-grey-700  text-sm leading-5 font-medium w-full focus:outline-none' placeholder="Search User" />
+                <input id="searchInput" type="text" className='text-grey-700  text-sm leading-5 font-medium w-full focus:outline-none input-shadow ' placeholder="Search User" />
                 <button type="button" ><img src={Find} alt="Search" /></button>
             </label>
             <div className="flex flex-col md:flex-row  items-center " >

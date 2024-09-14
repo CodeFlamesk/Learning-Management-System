@@ -137,22 +137,15 @@ const LogInAcc = () => {
     const handleAuth = () => {
         dispatch({ type: 'LOG_IN' });
         dispatch({ type: 'SET_EMAIL', payload: emailValue });
-
         navigate("/")
     };
 
 
     return (
-
         <div className="flex flex-col relative  h-full lg:flex-row lg:gap-16">
-
             <div className="flex mx-auto  flex-col relative z-30 w-full ft:w-420 lg:w-690   px-5 ">
-
                 <HeadindS title={"Log in to your account"} styles={'mx-auto pt-16 md:pt-[23%]'} />
-
-
                 <form className="flex flex-col " onSubmit={(e) => { e.preventDefault(); handleAuth(); }} >
-
                     <label htmlFor="emailLog">
                         <h5 className="heading-5pt">Email</h5>
                     </label>

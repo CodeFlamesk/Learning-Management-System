@@ -10,31 +10,27 @@ export const Show = ({ itemsPerPage, setItemsPerPage, setCurrentPage, showValue1
         { value: showValue3, label: showValue3 },
     ];
 
-
-
     const handleOptionClick = (option) => {
         setItemsPerPage(Number(option.value));
         setCurrentPage(1);
     };
 
     return (
-
         <CustomShow
             options={showFilters}
             styles="custom-select__show-option "
             styleselect="justify-between pl-2 "
-
             styleheader="custom-select__show "
             onOptionClick={handleOptionClick}
             selectedOption={showFilters.find(option => option.value === itemsPerPage.toString())}
         />
-
     );
 };
 
 const PaginationFunction = ({ data, renderItem, itemsPerPage: initialItemsPerPage, title, stylesRender, showValue1, showValue2, showValue3, children }) => {
     const [currentPage, setCurrentPage] = useState(1);
     const [itemsPerPage, setItemsPerPage] = useState(initialItemsPerPage);
+    const [previousPage, setPreviousPage] = useState(1);
 
     if (!data || data.length === 0) {
         return <p>Дані відсутні.</p>;
@@ -45,8 +41,14 @@ const PaginationFunction = ({ data, renderItem, itemsPerPage: initialItemsPerPag
     const firstItemIndex = lastItemIndex - itemsPerPage;
     const currentItems = data.slice(firstItemIndex, lastItemIndex);
 
-    const prevPage = () => setCurrentPage(prev => Math.max(prev - 1, 1));
-    const nextPage = () => setCurrentPage(prev => Math.min(prev + 1, totalPages));
+    const prevPage = () => setCurrentPage(prev => {
+        setPreviousPage(prev);  // Update previousPage before changing currentPage
+        return Math.max(prev - 1, 1);
+    });
+    const nextPage = () => setCurrentPage(prev => {
+        setPreviousPage(prev);  // Update previousPage before changing currentPage
+        return Math.min(prev + 1, totalPages);
+    });
 
     const numberPagination = (currentPage, totalPages) => {
         if (totalPages <= 3) {
@@ -60,12 +62,16 @@ const PaginationFunction = ({ data, renderItem, itemsPerPage: initialItemsPerPag
         }
         return [currentPage - 1, currentPage, currentPage + 1];
     };
+
     const paginationScrollRef = useRef(null);
+
     useEffect(() => {
-        if (paginationScrollRef.current && currentPage !== 1) {
+        // Scroll only if navigating through pagination
+        if (paginationScrollRef.current && previousPage !== currentPage) {
             paginationScrollRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
-    }, [currentPage]);
+    }, [currentPage, previousPage]);
+
     return (
         <div className='flex flex-col'>
             <div ref={paginationScrollRef} className='flex justify-between items-center pb-4 relative'>
@@ -95,7 +101,10 @@ const PaginationFunction = ({ data, renderItem, itemsPerPage: initialItemsPerPag
                 {numberPagination(currentPage, totalPages).map(number => (
                     <button
                         key={number}
-                        onClick={() => setCurrentPage(number)}
+                        onClick={() => {
+                            setPreviousPage(currentPage);  // Update previousPage when page is changed
+                            setCurrentPage(number);
+                        }}
                         className={`pagination-courses text-gray-900 hover:text-blue-500 group cursor-pointer ${currentPage === number ? 'text-blue border border-blue' : 'border-grey-border'} text-base`}
                     >
                         {number}
@@ -114,6 +123,5 @@ const PaginationFunction = ({ data, renderItem, itemsPerPage: initialItemsPerPag
         </div>
     );
 };
-
 
 export default PaginationFunction;
