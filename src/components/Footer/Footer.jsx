@@ -8,6 +8,8 @@ import ButtonText from '@/components/ui/buttons/ButtonText';
 import FooterTitle from '@/components/ui/FooterTitle';
 import FooterSmallText from '@/components/ui/FooterSmallText';
 import ButtonLinks from '@components/ui/buttons/ButtonLinks';
+import { Link, useNavigate } from 'react-router-dom';
+
 export const LinkSocial = ({ styleAll, styleIcon }) => {
     return (
         <div className={`flex  flex-wrap ${styleAll}`}>
@@ -47,12 +49,20 @@ export const LinkSocial = ({ styleAll, styleIcon }) => {
     );
 };
 const Footer = () => {
+    const navigate = useNavigate();
 
+    const handleClick = (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        setTimeout(() => {
+            navigate("/");
+        }, 300);
+    };
     return (
         <div className=' bg-grey-800 px-5 sm:px-8  h-full '>
             <div className='flex  flex-col max-w-screen-xl mx-auto  sm:flex-row justify-between pb-14 pt-7 md:gap-6 md:pt-20 md:pb-25 '>
                 <div className='basis-[42%] md:basis-[33%]' >
-                    <img src={logoFooter} alt="Logo" />
+                    <img src={logoFooter} alt="Logo " onClick={handleClick} className='cursor-pointer' />
                     <FooterSmallText title={`Empowering learners through accessible and engaging online education.
 Byway is a leading online learning platform dedicated to providing high-quality, flexible, and affordable educational experiences.`} />
                 </div>
