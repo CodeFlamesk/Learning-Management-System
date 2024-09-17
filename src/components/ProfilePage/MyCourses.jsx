@@ -140,7 +140,7 @@ const MyCourses = () => {
                 showValue3='12'
                 stylesRender="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6 mt-3 "
                 renderItem={(item, index) => (
-                    <Link key={index} to={`/bought-course/${index}/description`} >
+                    <Link key={index + 1} to={`/bought-course/${index + 1}/description`} >
                         <MyCoursesItem {...item} />
                     </Link>
                 )}

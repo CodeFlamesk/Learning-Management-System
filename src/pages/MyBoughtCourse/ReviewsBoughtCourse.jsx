@@ -20,7 +20,7 @@ const ReviewsBoughtCourse = ({ styles, style }) => {
 
     return (
         <div className="flex pt-6 pb-6">
-            <div className={`w-full border-t pb-6 border-grey-border relative ${styles}`}>
+            <div className={`w-full border-t pb-6  border-grey-border relative ${styles}`}>
                 <Subheading styles="pt-6" title="Learner Reviews" />
                 <Accordion type="single" collapsible className="flex border border-grey-border max-w-56 rounded-lg mt-4 absolute">
                     <AccordionItem value="item-1">

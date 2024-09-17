@@ -64,32 +64,34 @@ const Header = () => {
                         <div className={nav ? [style.category, style.active].join(' ') : style.category}>
                             <ul className={`flex flex-wrap ${nav && 'flex-col relative'}`}>
                                 <li>
-                                    <Link to="/categories" className={` leading-5 font-medium hover:text-blue transition-all duration-300 tb:pt-0 ${nav ? 'text-white text-2xl' : 'text-grey-700 text-sm'}`}>
+                                    <Link to="/categories" onClick={() => setNav(false)} className={` leading-5 font-medium hover:text-blue transition-all duration-300 tb:pt-0 ${nav ? 'text-white text-2xl' : 'text-grey-700 text-sm'}`}>
                                         Category
                                     </Link>
                                 </li>
-                                {isLoggedIn && nav && (<div className=' left-[-35%] absolute text-center items-center justify-center top-[80px]  flex flex-col gap-4 border-t border-t-grey-text-light p-6'>
-                                    <Link to="/myprofile/profile" className="text-center underline-menu group textMyProfile justify-center">
-                                        Profile
-                                        <span className="underline-menu-span"></span>
-                                    </Link>
-                                    <Link to="/categories/:id/details/shoppingcart" className="justify-center underline-menu group textMyProfile">
-                                        Order&nbsp;Page
-                                        <span className="underline-menu-span"></span>
-                                    </Link>
-                                    <Link to="/myprofile/my-courses" className="flex justify-center underline-menu group textMyProfile">
-                                        My&nbsp;Courses
-                                        <span className="underline-menu-span"></span>
-                                    </Link>
-                                    <a href="https://example.com/help" target="_blank" className="underline-menu group textMyProfile">
-                                        Help
-                                        <span className="underline-menu-span"></span>
-                                    </a>
-                                    <button className="underline-menu group textMyProfile text-2xl " onClick={() => { setOpenMyProfile(); handleAuth(); }}>
-                                        <p className=' text-2xl'> Logout</p>
-                                        <span className="underline-menu-span"></span>
-                                    </button>
-                                </div>)}
+                                <li>
+                                    {isLoggedIn && nav && (<div className='z-[3000] left-[-35%] absolute text-center items-center justify-center top-[80px]  flex flex-col gap-4 border-t border-t-grey-text-light p-6 '>
+                                        <Link to="/myprofile/profile" className="z-[999] text-center underline-menu group textMyProfile justify-center">
+                                            Profile
+                                            <span className="underline-menu-span"></span>
+                                        </Link>
+                                        <Link onClick={() => setNav(false)} to="/categories/:id/details/shoppingcart" className="justify-center underline-menu group textMyProfile">
+                                            Order&nbsp;Page
+                                            <span className="underline-menu-span"></span>
+                                        </Link>
+                                        <Link onClick={() => setNav(false)} to="/myprofile/my-courses" className="flex justify-center underline-menu group textMyProfile">
+                                            My&nbsp;Courses
+                                            <span className="underline-menu-span"></span>
+                                        </Link>
+                                        <a href="https://example.com/help" onClick={() => setNav(false)} target="_blank" className="underline-menu group textMyProfile">
+                                            Help
+                                            <span className="underline-menu-span"></span>
+                                        </a>
+                                        <button className="underline-menu group textMyProfile text-2xl " onClick={() => { setOpenMyProfile(); handleAuth(); setNav(false) }}>
+                                            <p className=' text-2xl'> Logout</p>
+                                            <span className="underline-menu-span"></span>
+                                        </button>
+                                    </div>)}
+                                </li>
                             </ul>
                         </div>
                     </nav>
@@ -102,10 +104,10 @@ const Header = () => {
                         <ul className={`flex flex-wrap `}
                         >
                             <li>
-                                {isLoggedIn ? (<Link to="/myprofile/profile" className={` leading-5 font-medium hover:text-blue transition-all duration-300 tb:pt-0  ${nav ? 'text-white text-2xl' : 'text-grey-700 text-sm'}`}>
-                                    Teach on Byway
-                                </Link>) : (<Link to="/login" className={` leading-5 font-medium hover:text-blue transition-all duration-300 tb:pt-0  ${nav ? 'text-white text-2xl' : 'text-grey-700 text-sm'}`}>
-                                    Teach on Byway
+                                {isLoggedIn ? (<Link to="/myprofile/my-courses" onClick={() => setNav(false)} className={` leading-5 font-medium hover:text-blue transition-all duration-300 tb:pt-0  ${nav ? 'text-white text-2xl' : 'text-grey-700 text-sm'}`}>
+                                    Learn on Byway
+                                </Link>) : (<Link to="/login" onClick={() => setNav(false)} className={` leading-5 font-medium hover:text-blue transition-all duration-300 tb:pt-0  ${nav ? 'text-white text-2xl' : 'text-grey-700 text-sm'}`}>
+                                    Learn on Byway
                                 </Link>)}
 
                             </li>
@@ -114,7 +116,8 @@ const Header = () => {
                     </nav>
                 </div>
 
-                <div className={nav ? [style.button_sign, style.active].join(' ') : [style.button_sign]}>
+                <div className={`${nav ? [style.button_sign, style.active].join(' ') : style.button_sign} ${isLoggedIn ? 'hidden sm:flex' : ''}`}
+                >
 
 
                     {isLoggedIn ? (<Link to={`/categories/${id}/details/shoppingcart`} className={`ml-auto ${nav && [style.basket]}`} ><img src={basket} alt="Basket" /></Link>) : (<Link to="/login" className={`ml-auto ${nav && [style.basket]}`} ><img src={basket} alt="Basket" /></Link>)}
@@ -165,16 +168,17 @@ const Header = () => {
                                         <p className='text-xs font-normal text-grey-800'>{email}</p>
                                     </div>
                                 </div>
-                                <div className='flex flex-col gap-4 border-y border-y-grey-text-light p-6'>
+                                <div className='flex flex-col gap-4 border-y border-y-grey-text-light p-6 '>
                                     <Link to="/myprofile/profile" className="underline-menu group textMyProfile">
                                         Profile
                                         <span className="underline-menu-span"></span>
                                     </Link>
-                                    <Link to="/categories/:id/details/shoppingcart" className="underline-menu group textMyProfile">
+
+                                    <Link onClick={() => setNav(false)} to="/categories/:id/details/shoppingcart" className="underline-menu group textMyProfile">
                                         Order Page
                                         <span className="underline-menu-span"></span>
                                     </Link>
-                                    <Link to="/myprofile/my-courses" className="underline-menu group textMyProfile">
+                                    <Link onClick={() => setNav(false)} to="/myprofile/my-courses" className="underline-menu group textMyProfile">
                                         My Courses
                                         <span className="underline-menu-span"></span>
                                     </Link>
@@ -182,11 +186,11 @@ const Header = () => {
                                 <div className='flex flex-col gap-4 p-6'>
 
 
-                                    <a href="https://example.com/help" target="_blank" className="underline-menu group textMyProfile">
+                                    <a onClick={() => setNav(false)} href="https://example.com/help" target="_blank" className="underline-menu group textMyProfile">
                                         Help
                                         <span className="underline-menu-span"></span>
                                     </a>
-                                    <button className="underline-menu group textMyProfile" onClick={() => { setOpenMyProfile(); handleAuth(); }}>
+                                    <button className="underline-menu group textMyProfile" onClick={() => { setOpenMyProfile(); handleAuth(); setNav(false) }}>
                                         Logout
                                         <span className="underline-menu-span"></span>
                                     </button>
@@ -195,10 +199,10 @@ const Header = () => {
                         </div>
                     ) : (
                         <>
-                            <Link to="/login" className="p-2.5 gap-x-6 box-border bg-grey-700 text-sm text-white border border-grey-700 items-center hover:bg-white hover:text-grey-700 sm:bg-white sm:text-grey-700 sm:hover:bg-grey-700 sm:hover:text-white transition-all duration-300 transform">
+                            <Link to="/login" onClick={() => setNav(false)} className="p-2.5 gap-x-6 box-border bg-grey-700 text-sm text-white border border-grey-700 items-center hover:bg-white hover:text-grey-700 sm:bg-white sm:text-grey-700 sm:hover:bg-grey-700 sm:hover:text-white transition-all duration-300 transform">
                                 Log In
                             </Link>
-                            <Link to="/signup" className="p-2.5 gap-x-6 box-border text-sm border-grey-700 bg-grey-700 text-white items-center sm:border-grey-700 border hover:bg-white hover:text-grey-700 transition-all duration-300 transform">
+                            <Link to="/signup" onClick={() => setNav(false)} className="p-2.5 gap-x-6 box-border text-sm border-grey-700 bg-grey-700 text-white items-center sm:border-grey-700 border hover:bg-white hover:text-grey-700 transition-all duration-300 transform">
                                 Sign Up
                             </Link>
                         </>

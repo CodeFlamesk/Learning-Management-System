@@ -5,7 +5,6 @@ import CustomSelect from '@/components/ui/Accordion';
 import ArrowDown from "@components/PageCategories/icon/ArrowDown";
 import SubheadingM from "@components/ui/SubheadingM";
 import ImageUploader from "./ImgUploader";
-
 const Profile = () => {
     const [selectedPriceFilter, setSelectedPriceFilter] = useState(null);
     const [nameValue, setNameValue] = useState('');

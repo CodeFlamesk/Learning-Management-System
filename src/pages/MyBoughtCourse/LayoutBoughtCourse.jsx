@@ -38,7 +38,7 @@ const LayoutBoughtCourse = () => {
             </div>
 
 
-            <Container >
+            <Container styles="pb-6" >
                 <p className="mt-6 text-grey-900 text-2xl font-semibold ">Introduction to User Experience Design</p>
                 <div className="flex flex-col-reverse lg:flex-row  pt-6 justify-between  relative gap-10 flex-shrink-0">
 

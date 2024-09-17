@@ -6,12 +6,7 @@ import Subheading from "@components/ui/Subheading";
 const ProfilePage = () => {
     return (
         <Container styles="pt-16 ">
-
             <ProfileImg />
-
-
-
-
         </Container>
     );
 };

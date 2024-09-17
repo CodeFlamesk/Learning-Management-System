@@ -7,8 +7,6 @@ import Instructors from '@components/Instructors/Instructors';
 import CommentsSlider from '@components/CommentsSlider/CommentsSlider';
 import BecomeInstructor from '@components/Home/BecomeInstructor/BecomeInstructor';
 import CheckoutCourses from '@components/Home/BecomeInstructor/CheckoutCourses';
-import Footer from '@components/Footer/Footer';
-import Header from '@components/Header/Header';
 import CoursesNumber from '@components/CoursesNumber/CoursesNumber';
 
 
@@ -31,13 +29,8 @@ const Home = () => {
                 <BecomeInstructor />
                 <CheckoutCourses />
             </Container>
-
-
-
-
-
         </>
     )
 }
 
-export default Home
+export default Home;

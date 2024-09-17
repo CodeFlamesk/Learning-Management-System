@@ -7,22 +7,23 @@ import logoFooter from './img/logo-footer.webp';
 import ButtonText from '@/components/ui/buttons/ButtonText';
 import FooterTitle from '@/components/ui/FooterTitle';
 import FooterSmallText from '@/components/ui/FooterSmallText';
+import ButtonLinks from '@components/ui/buttons/ButtonLinks';
 export const LinkSocial = ({ styleAll, styleIcon }) => {
     return (
         <div className={`flex  flex-wrap ${styleAll}`}>
-            <a href="#">
+            <a href="https://www.bing.com/ck/a?!&&p=814ef97eee203a43JmltdHM9MTcyNjUzMTIwMCZpZ3VpZD0xYzRmNTAwMy0xMTc1LTZjMmYtMzRkZS00NDQyMTA2NzZkMmUmaW5zaWQ9NTE5NA&ptn=3&ver=2&hsh=3&fclid=1c4f5003-1175-6c2f-34de-444210676d2e&psq=%d1%84&u=a1aHR0cHM6Ly91ay11YS5mYWNlYm9vay5jb20v&ntb=1" target="_blank">
                 <div className={`${styleIcon} `}>
                     <img src={facebook} alt="Logo-facebook" className={`w-6 h-6  `} />
                 </div>
             </a>
 
-            <a href="#">
+            <a href="https://github.com/CodeFlamesk" target="_blank">
                 <div className={`${styleIcon}`}>
                     <img src={GitHub} alt="Logo-GitHub" className={`w-6 h-6  `} />
                 </div>
             </a>
 
-            <a href="#">
+            <a href="https://www.google.com.ua/" target="_blank">
                 <div className={`${styleIcon}`}>
                     <img src={google} alt="Logo-google" className={`w-6 h-6  `} />
                 </div>
@@ -30,13 +31,13 @@ export const LinkSocial = ({ styleAll, styleIcon }) => {
 
 
 
-            <a href="#">
+            <a href="https://x.com/" target="_blank">
                 <div className={`${styleIcon} group`}>
                     <img src={twitter} alt="Logo-twitter " className={`w-6 h-6  filter  group-hover:brightness-0 group-hover:invert  `} />
                 </div>
             </a>
 
-            <a href="#">
+            <a href="#https://azure.microsoft.com/en-us/free/search/?ef_id=_k_a602dbd4e72310f31767bd3da3e9182c_k_&OCID=AIDcmm4rphvbww_SEM__k_a602dbd4e72310f31767bd3da3e9182c_k_&msclkid=a602dbd4e72310f31767bd3da3e9182c" target="_blank">
                 <div className={`${styleIcon} `}>
                     <img src={microsoft} alt="Logo-microsoft" className={`w-6 h-6  `} />
                 </div>
@@ -59,19 +60,19 @@ Byway is a leading online learning platform dedicated to providing high-quality,
                     <div >
                         <FooterTitle title={"Get Help"} />
                         <div className='flex flex-wrap gap-x-3 sm:flex-col ' >
-                            <ButtonText href="#" text={"Contact Us"} />
-                            <ButtonText href="#" text={"Latest Articles"} />
-                            <ButtonText href="#" text={"FAQ"} />
+                            <ButtonText href="https://example.com/help" text={"Contact Us"} />
+                            <ButtonText href="https://example.com/help" text={"Latest Articles"} />
+                            <ButtonText href="https://example.com/help" text={"FAQ"} />
                         </div>
 
                     </div>
                     <div>
                         <FooterTitle title={"Programs"} />
                         <div className='flex flex-wrap gap-x-3 sm:flex-col md:w-24'  >
-                            <ButtonText href="#" text={"Art & Design"} />
-                            <ButtonText href="#" text={"IT & Software"} />
-                            <ButtonText href="#" text={"Languages"} />
-                            <ButtonText href="#" text={"Programming"} />
+                            <ButtonLinks link="/categories" text={"Art & Design"} />
+                            <ButtonLinks link="/categories" text={"IT & Software"} />
+                            <ButtonLinks link="/categories" text={"Languages"} />
+                            <ButtonLinks link="/categories" text={"Programming"} />
                         </div>
 
                     </div>
