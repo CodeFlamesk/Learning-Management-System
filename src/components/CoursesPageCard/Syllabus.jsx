@@ -29,7 +29,7 @@ const Syllabus = () => {
 
                             </AccordionTriggerArrowLeft>
                             <AccordionContent  >
-                                c
+                                A comprehensive overview of user-centered design principles
                             </AccordionContent>
                         </AccordionItem>
                     </Accordion>
@@ -50,7 +50,7 @@ const Syllabus = () => {
 
                             </AccordionTriggerArrowLeft>
                             <AccordionContent  >
-                                c
+                                Introduction to the key concepts of UX design
                             </AccordionContent>
                         </AccordionItem>
                     </Accordion>
@@ -69,7 +69,7 @@ const Syllabus = () => {
 
                             </AccordionTriggerArrowLeft>
                             <AccordionContent  >
-                                c
+                                Interactive examples and exercises to enhance understanding
                             </AccordionContent>
                         </AccordionItem>
                     </Accordion>
@@ -88,7 +88,7 @@ const Syllabus = () => {
 
                             </AccordionTriggerArrowLeft>
                             <AccordionContent  >
-                                c
+                                Tips and best practices from experienced designers
                             </AccordionContent>
                         </AccordionItem>
                     </Accordion>
