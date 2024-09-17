@@ -3,6 +3,7 @@
 import MainTitle from "@/components/ui/MainTitle";
 import Text from "@/components/ui/Text";
 import ButtonBlue from '@/components/ui/buttons/ButtonBlue';
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 const MainBlockText = ({
@@ -11,13 +12,13 @@ const MainBlockText = ({
     title
 }) => {
     const navigate = useNavigate();
-
+    const isLoggedIn = useSelector(state => state.isLoggedIn);
     const handleClick = (e) => {
         e.preventDefault();
         window.scrollTo({ top: 0, behavior: 'smooth' });
         setTimeout(() => {
-            navigate("/myprofile/profile");
-        }, 300);
+            navigate(isLoggedIn ? "/myprofile/profile" : "/login");
+        }, 100);
     };
 
     return (

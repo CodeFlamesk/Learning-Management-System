@@ -60,7 +60,7 @@ import ArrowButtom from '../../ui/buttons/icon/ArrowButton'
 import Subheading from '@/components/ui/Subheading'
 import BlackButtonLinks from '@components/ui/buttons/BlackButtonLinks'
 import ArrowButton from '../../ui/buttons/icon/ArrowButton'
-
+import { useSelector } from 'react-redux';
 const data = [
     {
         title: "Become an Instructors",
@@ -92,6 +92,7 @@ const BecomeInstructor = () => {
 };
 
 const InstructorBecome = ({ title, text, buttonText, becomeImg, iconComponent }) => {
+    const isLoggedIn = useSelector(state => state.isLoggedIn);
     return (
 
 
@@ -103,7 +104,7 @@ const InstructorBecome = ({ title, text, buttonText, becomeImg, iconComponent })
             <div className='flex flex-col items-center text-center fs:text-left fs:items-start max-w-96 md:max-w-full /* md:w-2/5 */ '>
                 <Subheading title={title} />
                 <p className='font-normal text-base leading-7 pt-2 pb-4'> {text}</p>
-                <BlackButtonLinks link="/myprofile/profile" buttonText={buttonText} iconComponent={<ArrowButton />} />     </div>
+                <BlackButtonLinks link={isLoggedIn ? "/myprofile/profile" : "/login"} buttonText={buttonText} iconComponent={iconComponent} />     </div>
 
         </div>
     )
