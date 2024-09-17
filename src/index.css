@@ -325,26 +325,13 @@
 
 
 .swiper-pagination {
-  left: 0;
-  right: 0;
-  bottom: 1px;
-  text-align: center;
-  align-items: center;
-  display: flex;
-  gap: 30px;
-  z-index: 10;
-  justify-content: center;
+  @apply left-0 right-0 bottom-1 text-center flex items-center gap-[30px] z-10 justify-center;
 }
 
 .swiper-pagination-bullet {
-  background: #91d6e0;
-  width: 12px;
-  height: 12px;
-  opacity: 1;
-  border-radius: 50%;
+  @apply bg-[#91d6e0] w-4 h-4 opacity-100 rounded-full sm:w-3 sm:h-3;
 }
 
 .swiper-pagination-bullet-active {
-  background: #1d4ed8;
-
+  @apply bg-[#1d4ed8];
 }
