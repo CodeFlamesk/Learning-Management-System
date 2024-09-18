@@ -4,15 +4,13 @@ import NavArrow from "@/components/ui/icons/NavArrow";
 import SmallText from "@/components/ui/SmallText";
 import Container from '@/components/ui/Container';
 import PromotionImg from "@/components/CoursesPageCard/img/promotion.webp"
-import Subheading from '@/components/ui/Subheading';
 import Rating from '@/components/Courses/Rating';
 import SmoothStar from '@/components/CoursesPageCard/icon/SmoothStar';
-import Paragraph from '@/components/ui/Paragraph';
 import SubheadingM from '@/components/ui/SubheadingM';
 import TotalPrice from '@components/CheckOut/TotalPrice';
 import UnderlineLink from '@components/ui/buttons/UnderlineLink';
 const ShoppingCart = () => {
-    // Отримуємо id з параметрів маршруту
+
     const { id } = useParams();
 
     return (
@@ -181,38 +179,7 @@ const ShoppingCart = () => {
 
 
                 </div>
-                {/*   <div className='flex flex-col pt-3'>
-                    <p className='font-semibold text-xl text-grey-900 '>Order Details</p>
-                    <div className='flex flex-col border border-grey-border p-4 relative w-full tb:w-330w  gap-4 rounded-lg bg-sl-main mb-4'>
-                        <div className='flex justify-between  items-center'>
-                            <Paragraph styles="text-base text-grey-900">
-                                Price
-                            </Paragraph>
 
-                            <Subheading title="$300.00" />
-                        </div>
-                        <div className='flex justify-between items-center'>
-                            <Paragraph styles="text-base text-grey-900">
-                                Discount
-                            </Paragraph>
-                            <Subheading title="-$10.00" />
-                        </div>
-                        <div className='flex justify-between border-b border-grey-border pb-4 items-center'>
-                            <Paragraph styles="text-base text-grey-900">
-                                Tax
-                            </Paragraph>
-                            <Subheading title="$20.00" />
-                        </div>
-                        <div className='flex justify-between items-center'>
-                            <Subheading title="Total" />
-                            <Subheading title="$290.00" />
-                        </div>
-                    </div>
-
-                   
-                   
-
-                </div> */}
                 <TotalPrice cardWidth="w-full tb:w-330w mt-2" title='Order Details' padingTop="pt-3">
                     <Link to={`/categories/${id}/details/shoppingcart/checkout`} className="p-2.5  rounded-lg font-medium  box-border text-sm border items-center border-text-dark   text-white  bg-text-dark hover:text-grey-900 hover:bg-sl-blue  transition-all duration-500  mt-4">
                         <p className='flex items-center justify-center'>Proceed to Checkout</p>

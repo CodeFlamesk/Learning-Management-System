@@ -6,13 +6,13 @@ import { ChevronDown } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 
-// Перший варіант акордеону
+
 const Accordion = AccordionPrimitive.Root
 
 const AccordionItem = React.forwardRef(({ className, ...props }, ref) => (
   <AccordionPrimitive.Item
     ref={ref}
-    /* className={cn("border-b border-grey-300", className)} */
+
     {...props}
   />
 ))
@@ -57,7 +57,7 @@ const AccordionContentN = React.forwardRef(({ styles, className, children, ...pr
 ))
 AccordionContentN.displayName = "AccordionContentN"
 
-// Другий варіант акордеону зі стрілкою зліва
+
 const AccordionTriggerArrowLeft = React.forwardRef(({ className, children, ...props }, ref) => (
   <AccordionPrimitive.Header className="flex">
     <AccordionPrimitive.Trigger

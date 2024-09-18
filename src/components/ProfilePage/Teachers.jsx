@@ -1,25 +1,10 @@
-import Subheading from "@components/ui/Subheading";
+
 import AuthorRonaldImg from "../CoursesPageCard/img/author.webp";
-import Subtitle from "@components/ui/Subtitle";
-import ArrowIconBack from "./icon/ArrowIconBack";
-import DotsIcon from "./icon/DotsIcon";
-import { useState, useEffect, useRef } from "react";
-import SendIcon from "./icon/SendIcon";
-import SmallText from "@components/ui/SmallText";
-import CloseIcon from "./icon/CloseIcon";
+import { useState, } from "react";
 import Chat from "./Сhat";
-import { Pagination } from "swiper/modules";
 import PaginationFunction from "@components/Pagination/PaginationaFunction";
 
-/* 
-const formatTime = (date) => {
-    const formatter = new Intl.DateTimeFormat('en-US', {
-        hour: '2-digit',
-        minute: '2-digit',
-        hour12: true
-    });
-    return formatter.format(date).toLowerCase();
-}; */
+
 
 const Teachers = () => {
 

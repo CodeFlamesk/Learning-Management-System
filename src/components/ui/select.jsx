@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as SelectPrimitive from "@radix-ui/react-select";
 import { Check, ChevronDown, ChevronUp } from "lucide-react";
-import { cn } from "@/lib/utils"; // Переконайтеся, що цей шлях правильний для вашої утилітної бібліотеки
+import { cn } from "@/lib/utils";
 
 const Select = SelectPrimitive.Root;
 const SelectGroup = SelectPrimitive.Group;
@@ -14,7 +14,7 @@ const SelectTrigger = React.forwardRef((props, ref) => (
       "flex h-10 md:h-12 w-full items-center justify-between rounded-md border border-grey-900 bg-background font-medium px-4 md:px-6 py-2 md:py-3 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1",
       props.className
     )}
-    {...props} // Передача всіх пропусків, які можуть бути передані у компонент Trigger
+    {...props}
   >
     {props.children}
     <SelectPrimitive.Icon asChild>
@@ -28,7 +28,7 @@ const SelectScrollUpButton = React.forwardRef((props, ref) => (
   <SelectPrimitive.ScrollUpButton
     ref={ref}
     className={cn("flex cursor-default items-center justify-center py-1", props.className)}
-    {...props} // Передача всіх пропусків, які можуть бути передані у ScrollUpButton
+    {...props}
   >
     <ChevronUp className="h-4 w-4" />
   </SelectPrimitive.ScrollUpButton>
@@ -42,7 +42,7 @@ const SelectScrollDownButton = React.forwardRef((props, ref) => (
       "flex cursor-default items-center justify-center py-1 fill-grey-900 stroke-grey-900 text-grey-900",
       props.className
     )}
-    {...props} // Передача всіх пропусків, які можуть бути передані у ScrollDownButton
+    {...props}
   >
     <ChevronDown className="h-4 w-4 fill-grey-900 stroke-grey-900" />
   </SelectPrimitive.ScrollDownButton>
@@ -56,18 +56,18 @@ const SelectContent = React.forwardRef((props, ref) => (
       className={cn(
         "relative z-50 max-h-96 min-w-[8rem] overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
         props.position === "popper" &&
-          "data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1",
+        "data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1",
         props.className
       )}
       position={props.position}
-      {...props} // Передача всіх пропусків, які можуть бути передані у Content
+      {...props}
     >
       <SelectScrollUpButton />
       <SelectPrimitive.Viewport
         className={cn(
           "p-1",
           props.position === "popper" &&
-            "h-[var(--radix-select-trigger-height)] bg-white w-full min-w-[var(--radix-select-trigger-width)]"
+          "h-[var(--radix-select-trigger-height)] bg-white w-full min-w-[var(--radix-select-trigger-width)]"
         )}
       >
         {props.children}
@@ -82,7 +82,7 @@ const SelectLabel = React.forwardRef((props, ref) => (
   <SelectPrimitive.Label
     ref={ref}
     className={cn("py-1.5 pl-8 pr-2  text-sm font-semibold", props.className)}
-    {...props} // Передача всіх пропусків, які можуть бути передані у Label
+    {...props}
   />
 ));
 SelectLabel.displayName = SelectPrimitive.Label.displayName;
@@ -94,7 +94,7 @@ const SelectItem = React.forwardRef((props, ref) => (
       "relative flex w-full cursor-default select-none cursor-pointer items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
       props.className
     )}
-    {...props} // Передача всіх пропусків, які можуть бути передані у Item
+    {...props}
   >
     <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
       <SelectPrimitive.ItemIndicator>
@@ -110,7 +110,7 @@ const SelectSeparator = React.forwardRef((props, ref) => (
   <SelectPrimitive.Separator
     ref={ref}
     className={cn("-mx-1 my-1 h-px bg-muted", props.className)}
-    {...props} // Передача всіх пропусків, які можуть бути передані у Separator
+    {...props}
   />
 ));
 SelectSeparator.displayName = SelectPrimitive.Separator.displayName;

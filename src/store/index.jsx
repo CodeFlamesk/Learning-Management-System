@@ -29,7 +29,6 @@ const reducer = (state = defaultState, action) => {
     }
 };
 
-// Створення сховища
 const store = createStore(reducer);
 
 export default store;

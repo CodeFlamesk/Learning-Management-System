@@ -1,11 +1,11 @@
 .custom-select__arrow {
     transition: transform 0.2s ease;
-    /* Додає плавний перехід для анімації */
+
 }
 
 .custom-select__arrow.open {
     transform: rotate(180deg);
-    /* Перевертання стрілки */
+
 }
 
 .custom-select {

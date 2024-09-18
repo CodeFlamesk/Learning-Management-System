@@ -1,12 +1,12 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import CoursesImg from "./img/CoursesImg.svg";
 import Star from '@/components/Courses/icon/Star';
 import PaginationFunction from "@components/Pagination/PaginationaFunction";
 import Subtitle from "@components/ui/Subtitle";
 import Rating from "@components/Courses/Rating";
 import SubheadingM from "@components/ui/SubheadingM";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import CoursesImg1 from "./img/courseImg1.webp"
 import CoursesImg2 from "./img/courseImg2.webp"
 import CoursesImg3 from "./img/courseImg3.webp"

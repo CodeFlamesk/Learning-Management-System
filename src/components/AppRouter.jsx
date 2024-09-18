@@ -16,7 +16,7 @@ import ShoppingCart from '@/pages/paymentShoppingCart/ShoppingCart';
 import Checkout from '@pages/paymentShoppingCart/Checkout';
 import OrderComplate from '@pages/paymentShoppingCart/OrderComplete';
 import MentorPage from '@pages/MentorPage';
-import ProfilePage from '@pages/ProfilePage';
+
 import ProfileLayout from './ProfilePage/ProfileLayot';
 import Profile from './ProfilePage/Profile';
 

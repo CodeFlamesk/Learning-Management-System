@@ -1,8 +1,6 @@
 import { Link, Outlet, useParams } from "react-router-dom";
 import Footer from "@/components/Footer/Footer";
 import Container from "@/components/ui/Container";
-import CommentsSlider from "@/components/CommentsSlider/CommentsSlider";
-import CoursesCard from "@/components/Courses/CoursesCard";
 
 import TabsBoughtCourse from "./TabsBoughtCourse";
 import SubheadingN from "@components/ui/SubheadingN";

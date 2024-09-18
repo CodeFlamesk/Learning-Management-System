@@ -7,8 +7,7 @@
     box-sizing: border-box;
 }
 
-/* Стиль для кастомної кнопки 
-*/
+
 .custom-file-button {
     display: flex;
     justify-content: center;
@@ -26,12 +25,12 @@
 
 }
 
-/* Сховати реальний інпут для файлів */
+
 .input-uploaud {
     display: none;
 }
 
-/* При ховері міняємо колір тексту */
+
 .custom-file-button:hover {
 
     background: #7FA3D6;

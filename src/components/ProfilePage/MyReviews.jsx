@@ -71,7 +71,7 @@ const MyReviews = () => {
     );
 };
 
-// Компонент для відображення одного курсу
+
 const ReviewItem = ({ title, review, iconComponent }) => {
     const [more, setMore] = useState(false)
     const menuRef = useRef(null);

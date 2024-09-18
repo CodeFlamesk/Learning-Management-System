@@ -6,7 +6,7 @@ import Rating from "@components/Courses/Rating";
 
 import ProfilesFilter from "./ProfilesFilter";
 import { Link } from "react-router-dom";
-import CoursesImg1 from "@components/PageCategories/img/courseImg1.webp"
+
 import CoursesImg2 from "@components/PageCategories/img/courseImg2.webp"
 import CoursesImg3 from "@components/PageCategories/img/courseImg3.webp"
 import CoursesImg4 from "@components/PageCategories/img/courseImg4.webp"

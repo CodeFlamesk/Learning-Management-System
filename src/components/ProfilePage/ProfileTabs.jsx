@@ -3,7 +3,7 @@ import ShareIcon from "./icon/ShareIcon";
 import { NavLink } from 'react-router-dom';
 import { useEffect, useState } from "react";
 import ProfileTabsSlider from "./ProfileTabsSlider";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 const ProfileTabs = () => {
     const [isSmallMenu, setIsSmallMenu] = useState(window.innerWidth < 991.98);

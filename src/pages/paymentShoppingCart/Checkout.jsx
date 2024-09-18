@@ -53,16 +53,14 @@ const Checkout = () => {
 
             </div>
 
-            {/*  left-right*/}
 
             <div className="flex  flex-col-reverse w-full  gap-10 pt-[22px] tb:flex-row tb:justify-between ">
-                {/* left */}
 
 
                 <div className=" tb:basis-[65%] pb-17w">
                     <CheckBoxRound style="flex flex-col  bg-sl-main rounded-lg p-4" />
                 </div>
-                {/* right */}
+
                 <div className="flex flex-col pb-17w">
                     <Subheading title="Order Details" />
                     <div className='flex flex-col pt-2 gap-4 tb:w-400w'>

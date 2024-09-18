@@ -42,11 +42,11 @@ const PaginationFunction = ({ data, renderItem, itemsPerPage: initialItemsPerPag
     const currentItems = data.slice(firstItemIndex, lastItemIndex);
 
     const prevPage = () => setCurrentPage(prev => {
-        setPreviousPage(prev);  // Update previousPage before changing currentPage
+        setPreviousPage(prev);
         return Math.max(prev - 1, 1);
     });
     const nextPage = () => setCurrentPage(prev => {
-        setPreviousPage(prev);  // Update previousPage before changing currentPage
+        setPreviousPage(prev);
         return Math.min(prev + 1, totalPages);
     });
 
@@ -66,7 +66,7 @@ const PaginationFunction = ({ data, renderItem, itemsPerPage: initialItemsPerPag
     const paginationScrollRef = useRef(null);
 
     useEffect(() => {
-        // Scroll only if navigating through pagination
+
         if (paginationScrollRef.current && previousPage !== currentPage) {
             paginationScrollRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }

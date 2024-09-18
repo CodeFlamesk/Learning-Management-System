@@ -6,7 +6,7 @@ const OrderComplate = () => {
         <Container styles="flex justify-center items-center flex-col mt-[80px] h-full">
             <div className=" flex bg-green-600 rounded-full w-36 h-36 sm:w-200w sm:h-200w items-center justify-center pb-5 ">
                 <p className="w-16 h-20  bg-green-600 box-border  border-white border-r-[18px]  border-b-[17px] rotate-45 "></p>
-                {/* {<img src={ComplateImg} alt="ComplateImg" />} */}
+
             </div>
 
 

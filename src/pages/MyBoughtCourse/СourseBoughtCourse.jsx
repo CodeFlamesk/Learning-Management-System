@@ -57,7 +57,6 @@ const CourseDescription = () => {
                         </div>
 
                         <div className="flex items-center gap-2">
-                            {/*  <Author /> */}
 
                             <img src={Author} alt="Author" className="w-10 h-10 rounded-full" />
                             <SmallText title="Created by" />

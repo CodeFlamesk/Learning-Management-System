@@ -6,9 +6,6 @@ import {
 } from "@/components/ui/AccordionMain"
 import CheckBox from "./CheckBox"
 import { useState } from "react"
-import StarEmpty from "./icons/StarEmpty"
-import Star from "@/components/Courses/icon/Star.jsx"
-import CheckBoxRating from "./CheckBoxRating"
 import StarFilter from "./StarFilter"
 const CoursesFilter = () => {
     const [numberFirstChecked, setNumberFirstChecked] = useState(false);

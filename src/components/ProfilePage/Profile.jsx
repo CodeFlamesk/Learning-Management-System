@@ -6,7 +6,7 @@ import ArrowDown from "@components/PageCategories/icon/ArrowDown";
 import SubheadingM from "@components/ui/SubheadingM";
 import ImageUploader from "./ImgUploader";
 const Profile = () => {
-    const [selectedPriceFilter, setSelectedPriceFilter] = useState(null);
+
     const [nameValue, setNameValue] = useState('');
     const [lastNameValue, setLastNameValue] = useState('');
 
@@ -24,10 +24,7 @@ const Profile = () => {
         { value: 'Arabic', label: 'Arabic' },
     ];
 
-    const handlePriceFilterChange = (filter) => {
-        setSelectedPriceFilter(filter);
-        console.log('Selected Price Filter:', filter);
-    };
+
 
     const handleSaveName = (event) => {
         event.preventDefault();
