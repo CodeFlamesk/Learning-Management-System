@@ -1,38 +1,32 @@
 import React from 'react';
+import { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import SignUp from '@/pages/SignUp';
-import Home from '@/pages/Home';
-import LogIn from '@/pages/LogIn';
+const SignUp = lazy(() => import('@/pages/SignUp'));
+const Home = lazy(() => import('@/pages/Home'));
+const LogIn = lazy(() => import('@/pages/LogIn'));
 import Layout from './Layout';
-import Categories from '@/pages/Categories';
-import CoursePage from '@/pages/СoursePage';
-import Description from './CoursesPageCard/Description';
+const Categories = lazy(() => import('@/pages/Categories'));
+const CoursePage = lazy(() => import('@/pages/СoursePage'));
+const Description = lazy(() => import('./CoursesPageCard/Description'));
 import LayoutCourse from './CoursesPageCard/LayoutCourse';
-import Instructor from './CoursesPageCard/Instructor';
-import Syllabus from './CoursesPageCard/Syllabus';
-import Reviews from './CoursesPageCard/Reviews';
-import ShoppingCart from '@/pages/paymentShoppingCart/ShoppingCart';
-
-import Checkout from '@pages/paymentShoppingCart/Checkout';
-import OrderComplate from '@pages/paymentShoppingCart/OrderComplete';
-import MentorPage from '@pages/MentorPage';
-
+const Instructor = lazy(() => import('./CoursesPageCard/Instructor'));
+const Syllabus = lazy(() => import('./CoursesPageCard/Syllabus'));
+const Reviews = lazy(() => import('./CoursesPageCard/Reviews'));
+const ShoppingCart = lazy(() => import('@/pages/paymentShoppingCart/ShoppingCart'));
+const Checkout = lazy(() => import('@pages/paymentShoppingCart/Checkout'));
+const OrderComplate = lazy(() => import('@pages/paymentShoppingCart/OrderComplete'));
+const MentorPage = lazy(() => import('@pages/MentorPage'));
 import ProfileLayout from './ProfilePage/ProfileLayot';
-import Profile from './ProfilePage/Profile';
-
-import Teachers from './ProfilePage/Teachers';
-import Message from './ProfilePage/Message';
-import MyReviews from './ProfilePage/MyReviews';
-import MyCourses from './ProfilePage/MyCourses';
-import DescriptionBoughtCourse from '@pages/MyBoughtCourse/DetailsBoughtCourse';
-
+const Profile = lazy(() => import('./ProfilePage/Profile'));
+const Teachers = lazy(() => import('./ProfilePage/Teachers'));
+const Message = lazy(() => import('./ProfilePage/Message'));
+const MyReviews = lazy(() => import('./ProfilePage/MyReviews'));
+const MyCourses = lazy(() => import('./ProfilePage/MyCourses'));
+const DescriptionBoughtCourse = lazy(() => import('@pages/MyBoughtCourse/DetailsBoughtCourse'));
 import LayoutBoughtCourse from '@pages/MyBoughtCourse/LayoutBoughtCourse';
-import InstructorBoughtCourse from '@pages/MyBoughtCourse/InstructorBoughtCourse';
-import ReviewsBoughtCourse from '@pages/MyBoughtCourse/ReviewsBoughtCourse';
-import CoursesBoughtCourse from '@pages/MyBoughtCourse/CoursesBoughtCourse';
-
-
-
+const InstructorBoughtCourse = lazy(() => import('@pages/MyBoughtCourse/InstructorBoughtCourse'));
+const ReviewsBoughtCourse = lazy(() => import('@pages/MyBoughtCourse/ReviewsBoughtCourse'));
+const CoursesBoughtCourse = lazy(() => import('@pages/MyBoughtCourse/CoursesBoughtCourse'));
 const AppRouter = () => {
     return (
         <Routes>

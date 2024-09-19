@@ -5,6 +5,7 @@ import ProfileTabs from "./ProfileTabs";
 import Header from "@components/Header/Header";
 import Footer from "@components/Footer/Footer";
 import Container from "@components/ui/Container";
+import { Suspense } from "react";
 
 
 const ProfileLayout = () => {
@@ -20,7 +21,10 @@ const ProfileLayout = () => {
 
 
                     <div className="flex tb:basis-[74%]  overflow-hidden mb-8 ">
-                        <Outlet />
+                        <Suspense>
+                            <Outlet />
+                        </Suspense>
+
                     </div>
                 </div>
 

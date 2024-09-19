@@ -1,6 +1,8 @@
 import HeadingS from "@/components/ui/HeadingS";
 import SmallText from "@/components/ui/SmallText";
+import { useParams } from "react-router-dom";
 const CoursesNumber = () => {
+    const { id } = useParams();
     return (
 
         <div className="grid grid-cols-2 gap-6 gap-x-0  md:grid-cols-4 md:gap-0 bg-sl-main py-10 max-w-screen-ct mx-auto px-5 sm:px-8 ">

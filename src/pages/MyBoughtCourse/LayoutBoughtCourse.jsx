@@ -17,6 +17,7 @@ import {
     AccordionTriggerArrowLeft,
     AccordionContentN,
 } from "@/components/ui/AccordionMain"
+import { Suspense } from "react";
 const LayoutBoughtCourse = () => {
     const { index } = useParams()
 
@@ -44,7 +45,10 @@ const LayoutBoughtCourse = () => {
                         <YouTubeVideo />
                         <TabsBoughtCourse />
                         <main >
-                            <Outlet />
+                            <Suspense>
+                                <Outlet />
+                            </Suspense>
+
                         </main>
                     </div>
 

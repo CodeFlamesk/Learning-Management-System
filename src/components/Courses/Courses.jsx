@@ -10,7 +10,7 @@ const Courses = () => {
 
                 <BlueButtonText text={"See All"} />
             </HeaderBlock>
-           <CoursesCard/>
+            <CoursesCard />
         </div>
     )
 }

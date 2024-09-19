@@ -51,7 +51,7 @@ const Categories = () => {
 }
 const Categoryitem = ({ title, text, children }) => {
     return (
-        <div className="flex flex-col bg-white p-6  gap-2.5 rounded-2xl justify-center items-center border border-solid border-grey-border">
+        <a href='https://example.com/help' target='_blank' className="flex hover:bg-blue-lite hover:scale-105  duration-300 flex-col bg-white p-6  gap-2.5 rounded-2xl justify-center items-center border  border-solid border-grey-border">
             <div className="w-[70px]  sm:w-[100px] h-[70px] sm:h-[100px] flex justify-center items-center  rounded-full bg-primary-100">{children}</div>
 
 
@@ -60,7 +60,7 @@ const Categoryitem = ({ title, text, children }) => {
 
             <Paragraph text={text} />
 
-        </div>
+        </a>
     )
 }
 
