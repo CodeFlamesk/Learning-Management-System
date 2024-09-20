@@ -15,19 +15,19 @@ export const LinkSocial = ({ styleAll, styleIcon }) => {
         <div className={`flex  flex-wrap ${styleAll}`}>
             <a href="https://www.bing.com/ck/a?!&&p=814ef97eee203a43JmltdHM9MTcyNjUzMTIwMCZpZ3VpZD0xYzRmNTAwMy0xMTc1LTZjMmYtMzRkZS00NDQyMTA2NzZkMmUmaW5zaWQ9NTE5NA&ptn=3&ver=2&hsh=3&fclid=1c4f5003-1175-6c2f-34de-444210676d2e&psq=%d1%84&u=a1aHR0cHM6Ly91ay11YS5mYWNlYm9vay5jb20v&ntb=1" target="_blank">
                 <div className={`${styleIcon} `}>
-                    <img src={facebook} alt="Logo-facebook" className={`w-6 h-6  `} />
+                    <img src={facebook} alt="Logo-facebook" className={`w-6 h-6  `} width="24" height="24" loading={'lazy'} />
                 </div>
             </a>
 
             <a href="https://github.com/CodeFlamesk" target="_blank">
                 <div className={`${styleIcon}`}>
-                    <img src={GitHub} alt="Logo-GitHub" className={`w-6 h-6  `} />
+                    <img src={GitHub} alt="Logo-GitHub" className={`w-6 h-6`} width="24" height="24" loading={'lazy'} />
                 </div>
             </a>
 
             <a href="https://www.google.com.ua/" target="_blank">
                 <div className={`${styleIcon}`}>
-                    <img src={google} alt="Logo-google" className={`w-6 h-6  `} />
+                    <img src={google} alt="Logo-google" className={`w-6 h-6`} width="24" height="24" loading={'lazy'} />
                 </div>
             </a>
 
@@ -35,13 +35,13 @@ export const LinkSocial = ({ styleAll, styleIcon }) => {
 
             <a href="https://x.com/" target="_blank">
                 <div className={`${styleIcon} group`}>
-                    <img src={twitter} alt="Logo-twitter " className={`w-6 h-6  filter  group-hover:brightness-0 group-hover:invert  `} />
+                    <img src={twitter} alt="Logo-twitter " className={`w-6 h-6  filter  group-hover:brightness-0 group-hover:invert  `} width="24" height="24" loading={'lazy'} />
                 </div>
             </a>
 
             <a href="#https://azure.microsoft.com/en-us/free/search/?ef_id=_k_a602dbd4e72310f31767bd3da3e9182c_k_&OCID=AIDcmm4rphvbww_SEM__k_a602dbd4e72310f31767bd3da3e9182c_k_&msclkid=a602dbd4e72310f31767bd3da3e9182c" target="_blank">
                 <div className={`${styleIcon} `}>
-                    <img src={microsoft} alt="Logo-microsoft" className={`w-6 h-6  `} />
+                    <img src={microsoft} alt="Logo-microsoft" className={`w-6 h-6  `} width="24" height="24" loading={'lazy'} />
                 </div>
             </a>
 
@@ -62,7 +62,8 @@ const Footer = () => {
         <div className=' bg-grey-800 px-5 sm:px-8  h-full '>
             <div className='flex  flex-col max-w-screen-xl mx-auto  sm:flex-row justify-between pb-14 pt-7 md:gap-6 md:pt-20 md:pb-25 '>
                 <div className='basis-[42%] md:basis-[33%]' >
-                    <img src={logoFooter} alt="Logo " onClick={handleClick} className='cursor-pointer' />
+                    <img src={logoFooter} alt="Logo " onClick={handleClick} className='cursor-pointer' loading={'lazy'} width="111" 
+  height="40" />
                     <FooterSmallText title={`Empowering learners through accessible and engaging online education.
 Byway is a leading online learning platform dedicated to providing high-quality, flexible, and affordable educational experiences.`} />
                 </div>

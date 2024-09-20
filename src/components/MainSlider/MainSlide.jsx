@@ -8,10 +8,11 @@ const MainSlide = ({ image, text, title, buttonText }) => {
                 <MainBlockText buttonText={buttonText} title={title} text={text} />
             </div>
             <div className="basis-[48%]">
-                <img className='max-w-full' src={image} alt="img-rating" />
+                <img className='w-full max-w-full' src={image} alt="img-rating" width="614"
+                    height="477" />
             </div>
         </div>
     )
 }
 
-export default MainSlide
+export default MainSlide;
