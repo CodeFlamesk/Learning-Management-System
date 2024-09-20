@@ -2,14 +2,14 @@
 import Container from '@components/ui/Container';
 import Categories from '@components/Home/categories/Categories';
 import MainSlider from '@components/MainSlider/MainSlider';
-import Courses from '@components/Courses/Courses';
-import Instructors from '@components/Instructors/Instructors';
-import CommentsSlider from '@components/CommentsSlider/CommentsSlider';
-import BecomeInstructor from '@components/Home/BecomeInstructor/BecomeInstructor';
-import CheckoutCourses from '@components/Home/BecomeInstructor/CheckoutCourses';
 import CoursesNumber from '@components/CoursesNumber/CoursesNumber';
+import { lazy } from 'react';
 
-
+const Courses = lazy(() => import('@components/Courses/Courses'));
+const Instructors = lazy(() => import('@components/Instructors/Instructors'));
+const CommentsSlider = lazy(() => import('@components/CommentsSlider/CommentsSlider'));
+const BecomeInstructor = lazy(() => import('@components/Home/BecomeInstructor/BecomeInstructor'));
+const CheckoutCourses = lazy(() => import('@components/Home/BecomeInstructor/CheckoutCourses'));
 const Home = () => {
     return (
         <>
