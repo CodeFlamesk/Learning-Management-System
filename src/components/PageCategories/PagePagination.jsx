@@ -743,7 +743,8 @@ const CoursesItem = ({ coursesImg, title, author, rating, info, price }) => {
     return (
         <div className='flex flex-col hover:bg-blue-lite hover:scale-105  duration-300 bg-white p-3 border-grey-border rounded-2xl border border-solid xs:gap-2 h-full w-full sm:max-w-[300px] md:max-w-[300px]'>
             <div className='rounded-lg h-[139px] overflow-hidden object-cover max-h-full'>
-                <img className='max-w-full w-full object-cover h-full' src={coursesImg} alt="courses-img" />
+                <img className='max-w-full w-full object-cover h-full' src={coursesImg} alt="courses-img" width="266"
+                    height="139" />
             </div>
             <div className='flex flex-col mt-2 xs:mt-0 flex-1'>
                 <Subtitle title={title} />

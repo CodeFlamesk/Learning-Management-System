@@ -19,40 +19,22 @@
 
 @layer utilities {
 
-  .heading-1 {
-    @apply text-grey-900 text-2xl sm:text-3xl lg:text-[40px] leading-tight;
-  }
 
-  .heading-2 {
-    @apply text-xl sm:text-2xl lg:text-[32px] font-semibold text-grey-900 leading-tight;
-  }
-
-  .heading-3 {
-    @apply text-lg sm:text-xl lg:text-2xl font-semibold text-grey-900;
-  }
-
-  .heading-4-subheading {
-    @apply text-base sm:text-lg md:text-xl font-semibold text-grey-900 leading-relaxed;
-  }
-
-  .heading-5-subheading {
-    @apply text-lg font-semibold text-grey-900 leading-relaxed;
-  }
 
   .small-text {
     @apply font-normal text-sm leading-normal;
   }
 
   .paragraph {
-    @apply text-base font-normal leading-relaxed;
+    @apply text-base font-normal leading-relaxed text-orange;
   }
 
   .paragraph-medium {
-    @apply text-base font-medium leading-relaxed;
+    @apply text-base font-medium leading-relaxed text-orange;
   }
 
   .label {
-    @apply font-semibold text-xs leading-normal
+    @apply font-semibold text-xs leading-normal text-orange;
   }
 
 

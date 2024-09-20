@@ -44,7 +44,8 @@ const InstructorBecome = ({ title, text, buttonText, becomeImg, iconComponent })
 
         <div className='flex flex-col fs:flex-row justify-between   gap-4 items-center mde:justify-center  md:gap-x-36'>
             <div className='basis-[37%]  '>
-                <img className='max-w-48 fs:max-w-60 md:max-w-full' src={becomeImg} alt="StartInstructor" loading={'lazy'} />
+                <img className='max-w-48 fs:max-w-60 md:max-w-full' src={becomeImg} alt="StartInstructor" loading={'lazy'} width="400"
+                    height="425" />
             </div>
             <div className='flex flex-col items-center text-center fs:text-left fs:items-start max-w-96 md:max-w-full /* md:w-2/5 */ '>
                 <Subheading title={title} />

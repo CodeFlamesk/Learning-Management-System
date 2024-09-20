@@ -82,7 +82,8 @@ const InstructorsItem = ({ instructorsImg, title, subject, ranking, students }) 
     return (
         <div className="flex flex-col  bg-white p-6  border-grey-border   rounded-2xl border border-solid max-w-64 hover:bg-blue-lite hover:scale-105 cursor-pointer duration-300 " >
             <div className=' rounded-lg overflow-hidden object-cover max-w-full max-h-full'>
-                <img className='w-full  object-cover h-full' src={instructorsImg} alt="instructors-img" loading={'lazy'} />
+                <img className='w-full  object-cover h-full' src={instructorsImg} alt="instructors-img" loading={'lazy'} width="177"
+                    height="132" />
             </div>
             <div className="flex flex-col items-center pt-4 ">
                 <Subtitle title={title} />

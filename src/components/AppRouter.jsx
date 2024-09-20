@@ -2,7 +2,7 @@ import React from 'react';
 import { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
 const SignUp = lazy(() => import('@/pages/SignUp'));
-const Home = lazy(() => import('@/pages/Home'));
+import Home from '@pages/Home';
 const LogIn = lazy(() => import('@/pages/LogIn'));
 import Layout from './Layout';
 const Categories = lazy(() => import('@/pages/Categories'));
