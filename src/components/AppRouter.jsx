@@ -1,11 +1,11 @@
 import React from 'react';
 import { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
-const SignUp = lazy(() => import('@/pages/SignUp'));
+
 import Home from '@pages/Home';
-const LogIn = lazy(() => import('@/pages/LogIn'));
+
 import Layout from './Layout';
-const Categories = lazy(() => import('@/pages/Categories'));
+
 const CoursePage = lazy(() => import('@/pages/СoursePage'));
 const Description = lazy(() => import('./CoursesPageCard/Description'));
 import LayoutCourse from './CoursesPageCard/LayoutCourse';
@@ -14,7 +14,7 @@ const Syllabus = lazy(() => import('./CoursesPageCard/Syllabus'));
 const Reviews = lazy(() => import('./CoursesPageCard/Reviews'));
 const ShoppingCart = lazy(() => import('@/pages/paymentShoppingCart/ShoppingCart'));
 const Checkout = lazy(() => import('@pages/paymentShoppingCart/Checkout'));
-const OrderComplate = lazy(() => import('@pages/paymentShoppingCart/OrderComplete'));
+
 const MentorPage = lazy(() => import('@pages/MentorPage'));
 import ProfileLayout from './ProfilePage/ProfileLayot';
 const Profile = lazy(() => import('./ProfilePage/Profile'));
@@ -24,6 +24,10 @@ const MyReviews = lazy(() => import('./ProfilePage/MyReviews'));
 const MyCourses = lazy(() => import('./ProfilePage/MyCourses'));
 const DescriptionBoughtCourse = lazy(() => import('@pages/MyBoughtCourse/DetailsBoughtCourse'));
 import LayoutBoughtCourse from '@pages/MyBoughtCourse/LayoutBoughtCourse';
+import SignUp from '@pages/SignUp';
+import { LogIn } from 'lucide-react';
+import Categories from '@pages/Categories';
+import OrderComplate from '@pages/paymentShoppingCart/OrderComplete';
 const InstructorBoughtCourse = lazy(() => import('@pages/MyBoughtCourse/InstructorBoughtCourse'));
 const ReviewsBoughtCourse = lazy(() => import('@pages/MyBoughtCourse/ReviewsBoughtCourse'));
 const CoursesBoughtCourse = lazy(() => import('@pages/MyBoughtCourse/CoursesBoughtCourse'));
