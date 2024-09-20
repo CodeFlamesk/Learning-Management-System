@@ -1,7 +1,7 @@
 import React from 'react';
 import { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
-const SignUp = lazy(() => import('@/pages/SignUp'));
+
 import Home from '@pages/Home';
 const LogIn = lazy(() => import('@/pages/LogIn'));
 import Layout from './Layout';
@@ -24,6 +24,7 @@ const MyReviews = lazy(() => import('./ProfilePage/MyReviews'));
 const MyCourses = lazy(() => import('./ProfilePage/MyCourses'));
 const DescriptionBoughtCourse = lazy(() => import('@pages/MyBoughtCourse/DetailsBoughtCourse'));
 import LayoutBoughtCourse from '@pages/MyBoughtCourse/LayoutBoughtCourse';
+import SignUp from '@pages/SignUp';
 const InstructorBoughtCourse = lazy(() => import('@pages/MyBoughtCourse/InstructorBoughtCourse'));
 const ReviewsBoughtCourse = lazy(() => import('@pages/MyBoughtCourse/ReviewsBoughtCourse'));
 const CoursesBoughtCourse = lazy(() => import('@pages/MyBoughtCourse/CoursesBoughtCourse'));
