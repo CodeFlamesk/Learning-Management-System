@@ -120,7 +120,7 @@ const Header = () => {
                 >
 
 
-                    {isLoggedIn ? (<Link to={`/categories/${id}/details/shoppingcart`} className={`ml-auto ${nav && [style.basket]}`} ><img src={basket} alt="Basket" width="24" height="24" /></Link>) : (<Link to="/login" className={`ml-auto ${nav && [style.basket]}`} ><img src={basket} alt="Basket" /></Link>)}
+                    {isLoggedIn ? (<Link to={`/categories/${id}/details/shoppingcart`} className={`ml-auto ${nav && [style.basket]}`} ><img src={basket} alt="Basket" width="24" height="24" /></Link>) : (<Link to="/login" className={`ml-auto ${nav && [style.basket]}`} ><img src={basket} alt="Basket" width="24" height="24" /></Link>)}
 
 
 
