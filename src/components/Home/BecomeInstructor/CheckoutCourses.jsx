@@ -45,7 +45,7 @@ const CheckoutCourse = ({ title, text, buttonText, becomeImg, iconComponent }) =
                 <BlackButtonLinks link={isLoggedIn ? "/myprofile/profile" : "/login"} buttonText={buttonText} iconComponent={iconComponent} />
             </div>
             <div className='md:basis-[37%]'>
-                <img className='max-w-48 fs:max-w-60  md:max-w-full' src={becomeImg} alt="StartInstructor" />
+                <img className='max-w-48 fs:max-w-60  md:max-w-full' src={becomeImg} alt="StartInstructor" loading={'lazy'} />
             </div>
         </div>
     )
