@@ -56,7 +56,7 @@ const Header = () => {
         <header className='pt-3 gap-1 sm:gap-4 bg-white border-b border-grey-border pb-3'>
             <div className='z-50 flex items-center sm:justify-between px-5 sm:px-8 max-w-screen-ct mx-auto'>
                 <div className="flex items-center gap-2.5">
-                    <Link to="/" ><img src={logoHeader} alt="Logo" /></Link>
+                    <Link to="/" ><img src={logoHeader} alt="Logo" width="31" height="40" /></Link>
                     <Link to="/" className="brand-name">Byway</Link>
                 </div>
                 <div className={style.input}>

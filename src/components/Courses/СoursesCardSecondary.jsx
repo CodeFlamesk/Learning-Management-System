@@ -1,5 +1,5 @@
 import Star from './icon/Star';
-import CoursesImg from "./img/CoursesImg.png";
+import CoursesImg from "./img/CoursesImg.webp";
 import Subtitle from '@/components/ui/Subtitle';
 import Rating from './Rating';
 import CoursesImg10 from "@components/PageCategories/img/courseImg10.webp"

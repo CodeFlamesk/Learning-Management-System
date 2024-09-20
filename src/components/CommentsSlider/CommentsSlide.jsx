@@ -7,7 +7,7 @@ const CommentsSlide = ({ iconComponent, text, imgComments, author, profession })
             <p className="pl-1.5">{iconComponent}</p>
             <p className="font-normal text-sm sm:text-base leading-6 sm:leading-7 pt-2 sm:pt-5 ">{text}</p>
             <div className="flex pt-2 items-center  mt-auto">
-                <img src={imgComments} alt="author" />
+                <img src={imgComments} alt="author" width="60" height="60" loading={'lazy'} />
                 <div className="pl-2">
                     <Subtitle title={author} />
                     <SmallText title={profession} />
