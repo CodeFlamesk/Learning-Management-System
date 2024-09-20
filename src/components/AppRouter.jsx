@@ -25,9 +25,10 @@ const MyCourses = lazy(() => import('./ProfilePage/MyCourses'));
 const DescriptionBoughtCourse = lazy(() => import('@pages/MyBoughtCourse/DetailsBoughtCourse'));
 import LayoutBoughtCourse from '@pages/MyBoughtCourse/LayoutBoughtCourse';
 import SignUp from '@pages/SignUp';
-import { LogIn } from 'lucide-react';
+
 import Categories from '@pages/Categories';
 import OrderComplate from '@pages/paymentShoppingCart/OrderComplete';
+import LogIn from '@pages/LogIn';
 const InstructorBoughtCourse = lazy(() => import('@pages/MyBoughtCourse/InstructorBoughtCourse'));
 const ReviewsBoughtCourse = lazy(() => import('@pages/MyBoughtCourse/ReviewsBoughtCourse'));
 const CoursesBoughtCourse = lazy(() => import('@pages/MyBoughtCourse/CoursesBoughtCourse'));
