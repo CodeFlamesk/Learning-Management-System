@@ -7,7 +7,7 @@ import Container from "@/components/ui/Container";
 import CommentsSlider from "@/components/CommentsSlider/CommentsSlider";
 import CoursesCard from "@/components/Courses/CoursesCard";
 import { Suspense } from "react";
-import CoursesCardSecondary from "@components/Courses/СoursesCardSecondary";
+
 
 const LayoutCourse = () => {
 
@@ -28,7 +28,7 @@ const LayoutCourse = () => {
 
                     <TabsCourse />
                     <main >
-                        <Suspense>
+                        <Suspense fallback={<h1>Loading...</h1>}>
                             <Outlet />
                         </Suspense>
 
@@ -38,7 +38,7 @@ const LayoutCourse = () => {
             </div>
             <Container styles={'pb-60w pt-60w'}>
                 <h3 className="pb-6  text-2xl  text-grey-900   font-semibold ">Featured Courses</h3>
-                <CoursesCardSecondary />
+                <CoursesCard />
             </Container>
             <Footer />
         </div>

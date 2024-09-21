@@ -66,7 +66,6 @@ const PaginationFunction = ({ data, renderItem, itemsPerPage: initialItemsPerPag
     const paginationScrollRef = useRef(null);
 
     useEffect(() => {
-
         if (paginationScrollRef.current && previousPage !== currentPage) {
             paginationScrollRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
