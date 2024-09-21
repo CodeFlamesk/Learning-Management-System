@@ -1,17 +1,22 @@
 
 import Star from '@components/Courses/icon/Star';
-import CoursesImg from "../Courses/img/CoursesImg.png";
-import HeaderBlock from '@components/HeadersBlock/HeaderBlock';
+import CoursesImg from "../Courses/img/CoursesImg.webp";
 import SliderButton from '@components/ui/buttons/SliderButton';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
+import CoursesImg10 from "@components/PageCategories/img/courseImg10.webp";
+import CoursesImg2 from "@components/PageCategories/img/courseImg2.webp";
+import CoursesImg3 from "@components/PageCategories/img/courseImg3.webp";
+import CoursesImg4 from "@components/PageCategories/img/courseImg4.webp";
 
+import CoursesImg6 from "@components/PageCategories/img/courseImg6.webp";
 import { Navigation } from 'swiper/modules';
 import Subtitle from '@components/ui/Subtitle';
 import Rating from '@components/Courses/Rating';
 import SubheadingM from '@components/ui/SubheadingM';
 const data = [
     {
+        id: 1,
         coursesImg: CoursesImg,
         title: "Beginner’s Guide to Design",
         author: "By Ronald Richards",
@@ -21,6 +26,47 @@ const data = [
         price: "$149.9"
     },
     {
+        id: 2,
+        coursesImg: CoursesImg10,
+        title: "3D Modeling",
+        author: "By Cub Pes",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$100"
+    },
+    {
+        id: 3,
+        coursesImg: CoursesImg2,
+        title: "Modern Architecture",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$114.9"
+    },
+    {
+        id: 4,
+        coursesImg: CoursesImg3,
+        title: "Digital Marketing Strategy",
+        author: "By Robery Slim",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$100"
+    },
+    {
+        id: 5,
+        coursesImg: CoursesImg4,
+        title: "Beginner’s Guide to Design",
+        author: "By Ronald Richards",
+        iconComponent: <Star />,
+        rating: "(1200 Ratings)",
+        info: "22 Total Hours. 155 Lectures. Beginner",
+        price: "$149.9"
+    },
+    {
+        id: 6,
         coursesImg: CoursesImg,
         title: "Beginner’s Guide to Design",
         author: "By Ronald Richards",
@@ -30,7 +76,8 @@ const data = [
         price: "$149.9"
     },
     {
-        coursesImg: CoursesImg,
+        id: 7,
+        coursesImg: CoursesImg6,
         title: "Beginner’s Guide to Design",
         author: "By Ronald Richards",
         iconComponent: <Star />,
@@ -39,63 +86,29 @@ const data = [
         price: "$149.9"
     },
     {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
+        id: 8,
+        coursesImg: CoursesImg2,
+        title: "Modern Architecture",
         author: "By Ronald Richards",
         iconComponent: <Star />,
         rating: "(1200 Ratings)",
         info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
+        price: "$114.9"
     },
     {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
+        id: 9,
+        coursesImg: CoursesImg3,
+        title: "Digital Marketing Strategy",
+        author: "By Robery Slim",
         iconComponent: <Star />,
         rating: "(1200 Ratings)",
         info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
+        price: "$100"
     },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    },
-    {
-        coursesImg: CoursesImg,
-        title: "Beginner’s Guide to Design",
-        author: "By Ronald Richards",
-        iconComponent: <Star />,
-        rating: "(1200 Ratings)",
-        info: "22 Total Hours. 155 Lectures. Beginner",
-        price: "$149.9"
-    }
 ]
 const CourseSlide = ({ coursesImg, title, author, rating, info, price, }) => {
     return (
-        <div className='flex flex-col  bg-white p-4 sm:p-6 border-grey-border   rounded-2xl border border-solid  sm:max-w-61 md:max-w-full'>
+        <div className='flex flex-col  bg-white p-2 sm:p-4 border-grey-border   hover:bg-blue-lite  duration-300 cursor-pointer rounded-2xl border border-solid  sm:max-w-61 md:max-w-full'>
             <div className=' rounded-lg overflow-hidden object-cover max-h-full'>
                 <img className='max-w-full  object-cover h-full' src={coursesImg} alt="courses-img" />
             </div>
@@ -193,7 +206,7 @@ const CourseSlider = () => {
                     data.map((item, index) => {
                         return (
                             <SwiperSlide key={index} className='flex items-stretch  h-auto' >
-                                <CourseSlide {...item} className='flex max-h-full' />
+                                <CourseSlide {...item} className='flex max-h-full ' onClick={() => handleClick(item.id)} />
                             </SwiperSlide>
                         )
                     })
