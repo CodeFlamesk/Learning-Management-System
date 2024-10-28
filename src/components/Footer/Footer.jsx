@@ -95,11 +95,11 @@ Byway is a leading online learning platform dedicated to providing high-quality,
                         </div>
                         <div className='flex gap-1 '>
                             <p className=' text-grey-300  text-sm leading-relaxed font-medium  ' >Tel:</p>
-                            <ButtonText href="tel:" text={"+(123) 456-7890"} />
+                            <ButtonText href="https://www.upwork.com/freelancers/~01a687c8f95b7913d7" text={"+(123) 456-7890"} />
                         </div>
                         <div className='flex  gap-1'>
                             <p className=" text-grey-300  text-sm leading-relaxed font-medium  " >Mail:</p>
-                            <ButtonText type='email' href="mailto:Flamecorporationxd@gmail.com" text={"Flamecorporationxd@gmail.com"} />
+                            <ButtonText type='email' href="https://www.upwork.com/freelancers/~01a687c8f95b7913d7" text={"ExampleMail@gmail.com"} />
                         </div>
 
                         <LinkSocial styleIcon="footer-social" styleAll="pt-4 sm:pt-6  gap-5" />
