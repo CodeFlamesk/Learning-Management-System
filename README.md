@@ -28,7 +28,6 @@ Learning Management System (LMS) is a practice project (pet project) designed as
 - **Redux**
 - **React Router**
 - **JavaScript**
-- **HTML**
 - **Swiper**
 
 ## Installation & Run
