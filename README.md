@@ -2,24 +2,25 @@
 Link: https://learning-management-system-steel.vercel.app/
 ## About the Pet Project
 
-Through this project, I improved my React and JavaScript skills by working with state management, optimizing component reusability, and handling complex user interactions.
+Through this project, I improved my React skills by working with state management, optimizing component reusability, and handling complex user interactions.
 
-This project was also an opportunity to further develop JavaScript skills, particularly in managing state, handling user interactions, and implementing UI components.
+This project was also an opportunity to further develop my JavaScript skills, particularly in managing state, handling user interactions, and implementing UI components.
 
-Learning Management System (LMS) is a practice project (pet project) designed as a platform for purchasing courses and connecting with mentors. The project is built using React.js, Tailwind CSS, Redux, and React Router, incorporating various interactive elements to enhance the user experience.
-
+The Learning Management System (LMS) is a practice project (pet project) designed as a platform for purchasing courses and connecting with mentors. The project is built using React.js, Tailwind CSS, Redux, and React Router, incorporating various interactive elements to enhance the user experience.
 ## Features
 
-- **Tabs & Sliders**: Organized content navigation with interactive UI elements.
+- **Tabs**: Lets users quickly switch between different sections of content, making navigation smooth and intuitive.
+- **Sliders**: Interactive elements that allow users to easily scroll through content or images, providing a more engaging experience.
 - **Chat Simulator**: A simulated chat interface for user-mentor interactions.
 - **Authentication Simulation**: Mock login and signup system.
-- **Pagination & Filtering**: Efficient data display and navigation.
-- **Accordion**: Expandable sections for FAQs and course details.
-- **Form Validation**: Ensuring correct user input.
-- **Responsive Design** – Ensuring proper display on various devices.
+- **Pagination**: Users can easily navigate through different pages of content.
+- **Item Display Filter**: Users can adjust the number of podcasts displayed on the page.
+- **Accordion**: Expandable sections for FAQs and course information.
+- **Form Validation**: Ensuring users input the correct information.
+- **Responsive Design** – Ensures a smooth experience across all devices.
 - **Pixel Perfect** – Precise alignment with the design.
 - **Semantic HTML** – Improved SEO and accessibility.
-- **Clean Code** – Well-structured and organized code.
+- **Clean Code** –  Organized and easy-to-maintain code structure.
 
 ## Technologies Used
 
